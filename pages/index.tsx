@@ -1,11 +1,9 @@
-import LinkPage from "../components/Link"
+import Header from "../components/template/Header"
 
 const index = () => {
   return (
     <>
-      <LinkPage id="page01"/>
-      <LinkPage id="page02"/>
-
+    <Header color="#333"/>
     </>
   )
 }
