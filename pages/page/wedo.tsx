@@ -10,7 +10,7 @@ const wedo = () => {
             <Header color="#fff" />
             <PageBlack bg="#000" />
             <ChangeLink />
-            <MainLeft color="" />
+            <MainLeft color="#fff" />
         </>
     )
 }

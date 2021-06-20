@@ -1,5 +1,5 @@
 ﻿import { motion } from 'framer-motion'
-import React from 'react'
+import React, { VFC } from 'react'
 import styled from 'styled-components'
 
 const Wrapper = styled.div``
@@ -12,15 +12,18 @@ const textV = {
     closed: {color: "#000"},
     open: {color: "#fff"},
 }
+type Props = {
+    isOpen: boolean
+}
 
-const SideText = ({text, isOpen}) => {
+const SideText:VFC<Props> = ({isOpen}) => {
     return (
         <>
                 <Wrapper>
                     <Text
                         variants={textV}
                         animate={isOpen ? "open" : "closed"}
-                    >{text}</Text>
+                    >WHAT WE DO</Text>
                 </Wrapper>
         </>
     )

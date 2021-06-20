@@ -1,5 +1,5 @@
 ﻿import { motion } from 'framer-motion'
-import React from 'react'
+import { VFC } from 'react'
 import styled from 'styled-components'
 
 const BgWrapper = styled(motion.div)`
@@ -15,8 +15,11 @@ const wrapperV = {
     closed: {x: "0%"},
     open: {x: "-30%", transition: {duration: 0.3,}},
 }
+type Props = {
+    isOpen: boolean
+}
 
-const SideBg = ({isOpen}) => {
+const SideBg:VFC<Props> = ({isOpen}) => {
     return (
         <>
 

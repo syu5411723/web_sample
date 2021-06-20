@@ -10,7 +10,7 @@ import SideText from '../../atom/main/left/SideText'
 const Container = styled.div`
     position:fixed;
     top:50%;
-    left: -6.5%;
+    left: -30px;
     transform: rotate(90deg);
     z-index: 2;
 
@@ -35,7 +35,7 @@ const MainLeft: VFC<Props> = ({color}) => {
             <SideBg
                 leftOpen={leftOpen}
             />
-            <AnimateLine leftOpen={leftOpen} top="6px" bottom="0" />
+            <AnimateLine leftOpen={leftOpen} />
             <Links href="/page/weare">
                 <Container
                 >
@@ -45,7 +45,7 @@ const MainLeft: VFC<Props> = ({color}) => {
                     >
                         <SideText  leftOpen={leftOpen} color={color} />
                     </TextWrapper>
-                    <Line top="10px" bottom="0px" leftOpen={leftOpen} />
+                    <Line leftOpen={leftOpen} />
                 </Container>
             </Links>
         </>

@@ -9,7 +9,7 @@ import SideText from '../../atom/main/right/SideText'
 const Container = styled.div`
     position:fixed;
     top:50%;
-    right: -6%;
+    right: -30px;
     transform: rotate(90deg);
     z-index: 2;
 
@@ -31,16 +31,16 @@ const MainRight = () => {
             <SideBg
                 isOpen={isOpen}
             />
-            <AnimateLine top="20px" bottom="0" isOpen={isOpen}/>
+            <AnimateLine isOpen={isOpen}/>
             <Links href="/page/wedo" >
             <Container
             >
-                <Line top="0" bottom="10px" isOpen={isOpen} />
+                <Line isOpen={isOpen} />
                 <TextWrapper
                     onMouseLeave={RightChange}
                     onMouseEnter={RightChange}
                 >
-                <SideText text="WHAT WE DO" isOpen={isOpen} />
+                <SideText isOpen={isOpen} />
                 </TextWrapper>
             </Container>
             </Links>

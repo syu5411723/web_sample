@@ -1,5 +1,5 @@
 ﻿import { motion } from 'framer-motion'
-import React, { VFC } from 'react'
+import  { VFC } from 'react'
 import styled from 'styled-components'
 
 

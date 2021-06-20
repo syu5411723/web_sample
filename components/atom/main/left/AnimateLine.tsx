@@ -1,5 +1,5 @@
 ﻿import { motion } from 'framer-motion'
-import React from 'react'
+import {VFC} from "react"
 import styled from "styled-components"
 
 const LineWrapper = styled.div`
@@ -16,13 +16,15 @@ const lineV = {
     closed: {width: "0px"},
     open: {width: "150px", transition: {duration:0.4}},
 }
+type Props = {
+    leftOpen: boolean
+}
 
-const AnimateLine = ({top, bottom ,leftOpen}) => {
+const AnimateLine:VFC<Props> = ({leftOpen}) => {
     const Line = styled(motion.div)`
         width:1px;
         height:1px;
-        margin-top: ${top};
-        margin-bottom: ${bottom};
+        margin-top: 6px;
         background-color: gray;
 
     `
