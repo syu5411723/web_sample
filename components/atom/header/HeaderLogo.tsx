@@ -14,6 +14,7 @@ const HeaderLogo:VFC<Props> = ({color}) => {
     font-size:22px;
     color:${color};
     letter-spacing:2px;
+    cursor: pointer;
 `
     return (
         <>

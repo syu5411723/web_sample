@@ -19,6 +19,7 @@ const HeaderMenu: VFC<Props> = ({ color }) => {
     font-size:16px;
     letter-spacing:10px;
     color: ${color};
+    cursor: pointer;
 `
     return (
             <MenuWrapper>

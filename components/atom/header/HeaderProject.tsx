@@ -17,6 +17,7 @@ const HeaderProject:VFC<Props>  = ({color}) => {
     font-size:16px;
     letter-spacing:3px;
     color:${color};
+    cursor: pointer;
 `
 
     return (
