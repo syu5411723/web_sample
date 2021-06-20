@@ -1,5 +1,5 @@
 ﻿import { motion } from 'framer-motion'
-import React from 'react'
+import React, { VFC } from 'react'
 import styled from 'styled-components'
 
 
@@ -13,11 +13,14 @@ const BeforeContainer = styled.div`
 `
 
 const contaienrV = {
-    hidden: {x: "100vw"},
-    visible: {x: "0vw", transition: {duration: 1.3, delay: 0.6}}
+    hidden: { x: "100vw" },
+    visible: { x: "0vw", transition: { duration: 1.3, delay: 0.6 } }
+}
+type Props = {
+    bg: string
 }
 
-const PageBlack = ({bg}) => {
+const PageBlack: VFC<Props> = ({ bg }) => {
     const AfterContainer = styled(motion.div)`
     position:fixed;
     top:0;
