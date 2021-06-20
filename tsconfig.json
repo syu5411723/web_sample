@@ -23,7 +23,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "components/organism/main/weare/Sec02.tsx"  ],
   "exclude": [
     "node_modules"
   ]

@@ -8,6 +8,8 @@ const HeaderContainer  = styled.div`
     height: 80px;
     z-index: 5;
     color: #000;
+    top:0;
+    left: 0;
 `
 type Props = {
     color: string
