@@ -4,12 +4,12 @@ import styled from "styled-components"
 
 const NameWrapper = styled(motion.div)`
     position:absolute;
-    top: 100px;
+    top: 0;
     left: 100px;
-    z-index: 10;
+    z-index: 2;
 `
 const Text = styled.h2`
-    font-size:20px;
+    font-size:30px;
 `
 type Props = {
     name: string

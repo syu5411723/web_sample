@@ -18,7 +18,7 @@ const ImgWrapper = styled(motion.div)`
 
 const Sec03 = () => {
     const { scrollY } = useViewportScroll();
-    const y = useTransform(scrollY, [750, 1400], [0, -150])
+    const y = useTransform(scrollY, [750, 1700], [0, -100])
     return (
         <>
             <Container>

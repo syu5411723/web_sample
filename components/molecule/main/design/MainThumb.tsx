@@ -8,6 +8,7 @@ import Text02 from "../../../atom/main/design/Text02"
 const TextWrapper = styled(motion.div)`
     width: 500px;
     line-height: 30px;
+    margin-left: 100px;
 `
 
 const MainThumb = ({text01, text02, text03}) => {

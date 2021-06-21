@@ -2,16 +2,19 @@
 import styled from 'styled-components'
 
 const BgWrapper = styled.div`
-    width:70vw;
+    width:60vw;
     height: 100%;
     background-color:gray;
     opacity: 0.2;
+    position:absolute;
+    z-index:1;
+    right:0;
 `
 
 const Bg = () => {
     return (
         <>
-            
+            <BgWrapper />
         </>
     )
 }
