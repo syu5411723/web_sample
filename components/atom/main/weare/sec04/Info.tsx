@@ -6,6 +6,7 @@ const Wrapper = styled(motion.div)`
     position:absolute;
     top:70%;
     right:25%;
+    z-index:1;
 `
 const InfoText = styled.p`
     font-size: 20px;

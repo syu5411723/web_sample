@@ -8,6 +8,7 @@ const BgWrapper = styled.div`
     opacity: 0.2;
     position:absolute;
     z-index:1;
+    top:0;
     right:0;
 `
 

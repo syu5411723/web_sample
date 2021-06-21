@@ -4,7 +4,9 @@ import styled from "styled-components"
 const Wrapper = styled.div`
 
 `
-const Text = styled.p``
+const Text = styled.p`
+    font-size: 14px;
+`
 
 type Props = {
     content: string
