@@ -51,7 +51,7 @@ const Sec04 = () => {
 
 
                 </Inner>
-                <Button text="CAREER"/>
+                <Button text="CAREER" ButtonBool={true} small={true} />
             </Container>
         </>
     )
