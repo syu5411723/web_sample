@@ -14,7 +14,9 @@ const Container = styled.div`
     height:100%;
     width:100%;
     position :relative;
-    padding-bottom: 300px;
+`
+const Inner = styled.div`
+    margin-bottom: 150px;
 `
 const ThumbWrapper = styled(motion.div)``
 const Wrapper = styled.div`
@@ -33,6 +35,7 @@ const Sec04 = () => {
     return (
         <>
             <Container>
+                <Inner>
                 <Bg />
                 <MainThumb text01="OUR TEAM" text02="WISDOM OF" text03="CROEDS" />
                 {personData.map((data) => (
@@ -45,6 +48,9 @@ const Sec04 = () => {
                         </ProfileWrapper>
                     </>
                 ))}
+
+
+                </Inner>
                 <Button text="CAREER"/>
             </Container>
         </>

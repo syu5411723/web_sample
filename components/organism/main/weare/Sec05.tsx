@@ -1,11 +1,11 @@
 ﻿import ImgSec from "../../../atom/main/design/ImgSec"
 
-const Sec03 = () => {
+const Sec05 = () => {
     return (
         <>
-        <ImgSec primary={true} />
+            <ImgSec primary={false} />
         </>
     )
 }
 
-export default Sec03
+export default Sec05

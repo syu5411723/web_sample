@@ -49,24 +49,24 @@ const Button = ({ text }) => {
     const handleChange = () => setOpen(!isOpen);
     return (
         <>
-        <Container>
-            <ButtonImg isOpen={isOpen} />
-            <BottonContainer
-                onMouseEnter={handleChange}
-                onMouseLeave={handleChange}
-            >
-                <ButtonBg isOpen={isOpen} />
-                <ButtonInner>
-                    <ButtonWrapper
-                        variants={arrowV}
-                        animate={isOpen ? "open" : "closed"}
-                    >
-                        <ButtonArrow before={true} />
-                        <ButtonText text={text} />
-                        <ButtonArrow before={false} />
-                    </ButtonWrapper>
-                </ButtonInner>
-            </BottonContainer>
+            <Container>
+                <ButtonImg isOpen={isOpen} />
+                <BottonContainer
+                    onMouseEnter={handleChange}
+                    onMouseLeave={handleChange}
+                >
+                    <ButtonBg isOpen={isOpen} />
+                    <ButtonInner>
+                        <ButtonWrapper
+                            variants={arrowV}
+                            animate={isOpen ? "open" : "closed"}
+                        >
+                            <ButtonArrow before={true} />
+                            <ButtonText text={text} />
+                            <ButtonArrow before={false} />
+                        </ButtonWrapper>
+                    </ButtonInner>
+                </BottonContainer>
             </Container>
         </>
     )
