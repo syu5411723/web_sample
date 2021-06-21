@@ -7,9 +7,9 @@ import Info from "../../../atom/main/weare/sec04/Info"
 const Person = ({ img, name, info }) => {
     return (
         <>
-                    <Name name={name} />
-                    <Card img={img} />
-                    <Info info={info} />
+            <Name name={name} />
+            <Card img={img} />
+            <Info info={info} />
         </>
     )
 }

@@ -1,7 +1,9 @@
-﻿import React from 'react'
+﻿import { motion } from 'framer-motion'
+import React from 'react'
+import { useInView } from 'react-intersection-observer'
 import styled from 'styled-components'
 
-const BgWrapper = styled.div`
+const BgWrapper = styled(motion.div)`
     width:60vw;
     height: 100%;
     background-color:gray;
@@ -11,11 +13,23 @@ const BgWrapper = styled.div`
     top:0;
     right:0;
 `
+const bgV = {
+    closed: {x: "100%"},
+    open: {x: "0", transition:{duration:1}}, 
+}
 
 const Bg = () => {
+    const [ref, inView] = useInView({
+        rootMargin: "-100px 0px",
+        triggerOnce: true,
+    })
     return (
         <>
-            <BgWrapper />
+            <BgWrapper 
+                ref={ref}
+                variants={bgV}
+                animate={inView ? "open" : "closed" }
+            />
         </>
     )
 }

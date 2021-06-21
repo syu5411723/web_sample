@@ -21,7 +21,7 @@ const Container = styled.div<Size>`
 `
 const BottonContainer = styled.div<Size>`
     background-color:#000;
-    width:${({ small }) => small ? "75%" : "100%"};
+    width:${({ small }) => small ? "70%" : "100%"};
     height: ${({ small }) => small ? "75%" : "100%"};
     cursor: pointer;
     position:relative;
@@ -44,12 +44,12 @@ const ButtonWrapper = styled(motion.div)`
 
 `
 const arrowV = {
-    closed: { x: "-30%", transition: { duration: 0.4 } },
-    open: { x: "8%", transition: { duration: 0.4 } }
+    closed: { x: "-32%", transition: { duration: 0.4 } },
+    open: { x: "4%", transition: { duration: 0.4 } }
 }
 const arrowV02 ={
-    closed: { x: "-17%", transition: { duration: 0.4 } },
-    open: { x: "1%", transition: { duration: 0.4 } }
+    closed: { x: "-65px", transition: { duration: 0.4 } },
+    open: { x: "15px", transition: { duration: 0.4 } }
 }
 
 type Props = {

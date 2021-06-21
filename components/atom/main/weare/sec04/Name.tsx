@@ -1,10 +1,10 @@
-﻿import { motion } from "framer-motion"
+﻿import { motion, useTransform, useViewportScroll } from "framer-motion"
 import { VFC } from "react"
 import styled from "styled-components"
 
 const NameWrapper = styled(motion.div)`
     position:absolute;
-    top: 0;
+    top: 50px;
     left: 100px;
     z-index: 2;
 `
@@ -16,9 +16,13 @@ type Props = {
 }
 
 const Name:VFC<Props> = ({ name }) => {
+    const { scrollYProgress } = useViewportScroll();
+    const y = useTransform(scrollYProgress, [0.26, 0.4], [0, -110])
     return (
         <>
-            <NameWrapper>
+            <NameWrapper
+                style={{y: y}}
+            >
                 <Text>
                     {name}
                 </Text>

@@ -29,7 +29,7 @@ const ImgSec: VFC<Props> = ({ primary }) => {
     const { scrollY } = useViewportScroll();
     const { scrollYProgress } = useViewportScroll();
     const y = useTransform(scrollY, [750, 1700], [0, -100])
-    const y2 = useTransform(scrollYProgress, [0.5, 1], [0, -100])
+    const y2 = useTransform(scrollYProgress, [0.8, 1], [0, -100])
     return (
         <>
 

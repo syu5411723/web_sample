@@ -1,4 +1,4 @@
-﻿import { motion } from "framer-motion"
+﻿import { motion, useViewportScroll, useTransform } from "framer-motion"
 import { VFC } from "react"
 import styled from "styled-components"
 
@@ -17,9 +17,13 @@ type Props = {
 }
 
 const Info:VFC<Props> = ({info}) => {
+    const { scrollYProgress } = useViewportScroll();
+    const y = useTransform(scrollYProgress, [0.3, 0.4], [0, -100])
     return (
         <>
-            <Wrapper>
+            <Wrapper
+                style={{y:y}}
+            >
                 <InfoText>{info}</InfoText>
             </Wrapper>
         </>
