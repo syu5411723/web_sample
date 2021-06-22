@@ -1,6 +1,7 @@
 ﻿import React from 'react'
 import styled from 'styled-components'
-import Sec01 from '../../organism/main/wedo/Sec01'
+
+import {Sec01 , Sec02, Sec03, Sec04 } from "../../organism/main/wedo/index"
 
 const Container = styled.div`
     position: absolute;
@@ -14,6 +15,9 @@ const WeDoMain = () => {
         <>
             <Container>
                 <Sec01 />
+                <Sec02 />
+                <Sec03 />
+                <Sec04 />
             </Container>
         </>
     )

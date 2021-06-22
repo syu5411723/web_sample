@@ -1,0 +1,5 @@
+﻿export { default as Bg } from "./Bg"
+export { default as HeadText } from "./HeadText"
+export { default as Img } from "./Img"
+export {default as Number} from "./Number"
+export {default as Title } from "./Title"

@@ -1,5 +1,4 @@
-﻿import { motion } from 'framer-motion'
-import React from 'react'
+﻿import React from 'react'
 import styled from 'styled-components'
 
 import MainThumb from '../../../molecule/main/design/MainThumb'
@@ -18,7 +17,6 @@ const Container = styled.div`
 const Inner = styled.div`
     margin-bottom: 150px;
 `
-const ThumbWrapper = styled(motion.div)``
 const Wrapper = styled.div`
     position: relative;
     width:100vw;

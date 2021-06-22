@@ -1,11 +1,11 @@
 ﻿import { motion } from 'framer-motion'
 import React from 'react'
 import styled from 'styled-components'
-import Head from '../../../atom/main/wedo/Head'
-import SubHead from '../../../atom/main/wedo/SubHead'
+import Head from '../../../atom/main/wedo/sec01/Head'
+import SubHead from '../../../atom/main/wedo/sec01/SubHead'
 
 const Container = styled.div`
-
+    margin-top: 100px;
 `
 
 

@@ -1,11 +1,4 @@
 ﻿import styled from "styled-components"
-// import Sec01 from "../../organism/main/weare/Sec01"
-// import Sec02 from "../../organism/main/weare/Sec02"
-// import Sec03 from "../../organism/main/weare/Sec03"
-// import Sec04 from "../../organism/main/weare/Sec04"
-// import Sec05 from "../../organism/main/weare/Sec05"
-// import Sec06 from "../../organism/main/weare/Sec06"
-// import Sec07 from "../../organism/main/weare/Sec07"
 
 import { Sec01, Sec02, Sec03, Sec04, Sec05, Sec06, Sec07 } from "../../organism/main/weare/index"
 
@@ -19,7 +12,7 @@ const Container = styled.div`
 const WeAreMain = () => {
     return (
         <>
-            <Container>
+            <Container>a
                 <Sec01 />
                 <Sec02 />
                 <Sec03 />

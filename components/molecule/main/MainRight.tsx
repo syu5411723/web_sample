@@ -1,6 +1,7 @@
 ﻿import React from 'react'
 import Link from 'next/link'
 import styled from "styled-components"
+
 import AnimateLine from '../../atom/main/right/AnimateLine'
 import Line from '../../atom/main/right/Line'
 import SideBg from '../../atom/main/right/SideBg'
