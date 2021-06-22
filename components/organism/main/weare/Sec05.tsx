@@ -3,7 +3,7 @@
 const Sec05 = () => {
     return (
         <>
-            <ImgSec primary={false} />
+            <ImgSec primary={false} page={true} img="/images/who_05.jpg" />
         </>
     )
 }

@@ -1,59 +1,16 @@
-﻿import styled from "styled-components"
-import Image from "next/image"
-import { motion, useTransform, useViewportScroll } from "framer-motion"
-import { VFC } from "react"
+﻿import Sec03Img from "./secImg/wedo/Sec03Img"
+import Sec05Img from "./secImg/wedo/Sec05Img"
+import Sec04Img from "./secImg/weare/Sec04img"
 
 
-const Container = styled.div`
-    width:100%;
-    height: 550px;
-    overflow:hidden;
-    margin-top: 50px;
-`
-const Sec05Container = styled.div`
-    width:100%;
-    height: 550px;
-    overflow:hidden;
-    margin-top: -100px;
-`
-const ImgWrapper = styled(motion.div)`
-    width: 100vw;
-    height: 500px;
-    position:relative;
-`
-type Props = {
-    primary: boolean
-}
-
-const ImgSec: VFC<Props> = ({ primary }) => {
-    const { scrollY } = useViewportScroll();
-    const { scrollYProgress } = useViewportScroll();
-    const y = useTransform(scrollY, [750, 1700], [0, -100])
-    const y2 = useTransform(scrollYProgress, [0.8, 1], [0, -100])
+const ImgSec = ({ page, img, primary }) => {
     return (
         <>
-
-            {primary ? (
-                <Container>
-                    <ImgWrapper
-                        style={{ y: y }}
-                    >
-                        <Image src="/images/who_03.jpg" objectFit="cover" layout="fill" />
-                    </ImgWrapper>
-                </Container>
-            ) : (
-                <Sec05Container>
-                    <ImgWrapper
-                        style={{ y: y2 }}
-                    >
-                        <Image src="/images/who_05.jpg" objectFit="cover" layout="fill" />
-                    </ImgWrapper>
-                </Sec05Container>
-            )}
-
-
+                <Sec03Img page={page} primary={primary} img={img} />
+                <Sec05Img page={page} primary={primary} img={img} />
+                <Sec04Img page={page} primary={primary} img={img} />
         </>
     )
+
 }
 export default ImgSec
-

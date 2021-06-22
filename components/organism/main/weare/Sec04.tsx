@@ -17,6 +17,9 @@ const Container = styled.div`
 const Inner = styled.div`
     margin-bottom: 150px;
 `
+const ThumbWrapper = styled.div`
+    margin-left: 100px;
+`
 const Wrapper = styled.div`
     position: relative;
     width:100vw;
@@ -34,18 +37,20 @@ const Sec04 = () => {
         <>
             <Container>
                 <Inner>
-                <Bg />
-                <MainThumb text01="OUR TEAM" text02="WISDOM OF" text03="CROEDS" />
-                {personData.map((data) => (
-                    <>
-                        <Wrapper>
-                            <Person name={data.name} img={data.img} info={data.info} />
-                        </Wrapper>
-                        <ProfileWrapper>
-                            <ProfileContet content={data.content} />
-                        </ProfileWrapper>
-                    </>
-                ))}
+                    <Bg />
+                    <ThumbWrapper>
+                        <MainThumb text01="OUR TEAM" text02="WISDOM OF" text03="CROEDS" text04="" primary={true} />
+                    </ThumbWrapper>
+                    {personData.map((data) => (
+                        <>
+                            <Wrapper>
+                                <Person name={data.name} img={data.img} info={data.info} />
+                            </Wrapper>
+                            <ProfileWrapper>
+                                <ProfileContet content={data.content} />
+                            </ProfileWrapper>
+                        </>
+                    ))}
 
 
                 </Inner>

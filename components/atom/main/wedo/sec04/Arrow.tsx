@@ -1,8 +1,23 @@
 ﻿import styled from "styled-components"
 
-const Wrapper = styled.div``
-const Line01 = styled.div``
-const Line02 = styled.div``
+const Wrapper = styled.div`
+    position:absolute;
+    top:40%;
+    right:10%;
+`
+const Line01 = styled.div`
+    width: 45px;
+    height: 3px;
+    background-color: #fff;
+    transform:rotate(30deg) ;
+
+`
+const Line02 = styled.div`
+    width: 45px;
+    height: 3px;
+    background-color: #fff;
+    transform:rotate(-30deg) translate(-8px, 18px) ;
+`
 
 
 const Arrow = () => {
