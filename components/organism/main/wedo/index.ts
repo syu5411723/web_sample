@@ -2,3 +2,6 @@
 export {default as Sec02} from "./Sec02"
 export {default as Sec03} from "./Sec03"
 export {default as Sec04} from "./Sec04"
+export {default as Sec05} from "./Sec05"
+export {default as Sec06} from "./Sec06"
+export {default as Sec07} from "./Sec07"

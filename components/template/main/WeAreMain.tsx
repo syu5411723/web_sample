@@ -12,7 +12,7 @@ const Container = styled.div`
 const WeAreMain = () => {
     return (
         <>
-            <Container>a
+            <Container>
                 <Sec01 />
                 <Sec02 />
                 <Sec03 />

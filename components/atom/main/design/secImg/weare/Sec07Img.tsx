@@ -11,10 +11,10 @@ type Props = {
     primary: boolean
 }
 
-const Sec04Img:VFC<Props> = ({ page, primary, img }) => {
+const Sec07Img:VFC<Props> = ({ page, primary, img }) => {
     const { scrollYProgress } = useViewportScroll();
-    const y = useTransform(scrollYProgress, [0, 0.5], [0, -1000])
-    if (page === false && primary ) {
+    const y = useTransform(scrollYProgress, [0.7, 1], [0, -100])
+    if (page === false && primary === false ) {
         return (
             <>
                 <Container>
@@ -30,4 +30,4 @@ const Sec04Img:VFC<Props> = ({ page, primary, img }) => {
         return null
     }
 }
-export default Sec04Img
+export default Sec07Img

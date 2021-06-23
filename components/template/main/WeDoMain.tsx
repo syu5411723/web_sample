@@ -1,13 +1,11 @@
 ﻿import React from 'react'
 import styled from 'styled-components'
 
-import {Sec01 , Sec02, Sec03, Sec04 } from "../../organism/main/wedo/index"
+import {Sec01 , Sec02, Sec03, Sec04 , Sec05, Sec06, Sec07} from "../../organism/main/wedo/index"
 
 const Container = styled.div`
-    position: absolute;
+    position: relative;
     z-index: 10;
-    top:0;
-    left: 0;
 `
 
 const WeDoMain = () => {
@@ -18,6 +16,9 @@ const WeDoMain = () => {
                 <Sec02 />
                 <Sec03 />
                 <Sec04 />
+                <Sec05 />
+                <Sec06 />
+                <Sec07 />
             </Container>
         </>
     )
