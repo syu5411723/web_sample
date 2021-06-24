@@ -1,8 +1,9 @@
 ﻿import styled from "styled-components"
 
 const Wrapper = styled.div`
-    width: 87vw;
-    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 6.5%;
 `
 
 const T = styled.h2`
