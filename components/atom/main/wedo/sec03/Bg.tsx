@@ -1,4 +1,5 @@
 ﻿import { motion } from "framer-motion"
+import { useInView } from "react-intersection-observer"
 import styled from "styled-components"
 
 
@@ -22,13 +23,24 @@ const Right = styled.div`
     width:10%;
     height:100%;
 `
-
+const wrapperV = {
+    hidden: { x: "90vw" },
+    visible: { x: "0", transition: { duration: 0.4, delay: 0.7 } }
+}
 
 const Bg = () => {
+    const [ref, inView] = useInView({
+        rootMargin: "-100px 0px",
+        triggerOnce: true,
+    })
     return (
         <>
             <Container>
-                <Wrapper>
+                <Wrapper
+                    ref={ref}
+                    variants={wrapperV}
+                    animate={inView ? "visible" : "hidden"}
+                >
                     <Left />
                     <Right />
                 </Wrapper>

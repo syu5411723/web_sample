@@ -4,67 +4,57 @@ import { motion, useTransform, useViewportScroll } from "framer-motion"
 
 import Img from "../../../atom/main/wedo/sec05/Img"
 import Text from "../../../atom/main/wedo/sec05/Text"
-import ImgSec from "../../../atom/main/design/ImgSec"
 
 const Container = styled.div`
-    margin-top: 400px;
+    margin-top: 300px;
     position:relative;
     height:150vw;
     display:flex;
     align-items:center;
 `
+type Position = {
+    primary: boolean
+}
+
+export const ImgWrapper = styled(motion.div)<Position>`
+    position:absolute;
+    ${primary}}{
+
+    }
+    top:0;
+    left: 0;
+`
+
 type Style = {
     top: number
 
 }
-const ImgWrapper01 = styled(motion.div)`
-    width:70vw;
-    height: 40vw;
-    position:absolute;
-    top: 0;
-    left: 15%;
-`
-const ImgWrapper02 = styled(motion.div)`
-    width:60vw;
-    height: 35vw;
-    position:absolute;
-    top: 50%;
-    left: 25%;
-`
-const ImgWrapper03 = styled(motion.div)`
-    width:40vw;
-    height: 30vw;
-    position:absolute;
-    top: 65%;
-    left: 12.5%;
-`
-
 
 const Sec05 = () => {
     const { scrollYProgress } = useViewportScroll();
     const y1 = useTransform(scrollYProgress, [0.5, 0.8], [0, -100])
-    const y2 = useTransform(scrollYProgress, [0.6, 0.9], [0, 100])
-    const y3 = useTransform(scrollYProgress, [0.6, 0.9], [0, -100])
+    const y2 = useTransform(scrollYProgress, [0.6, 0.9], [0, -100])
+    const y3 = useTransform(scrollYProgress, [0.6, 0.9], [0, 100])
 
     return (
         <>
             <Container>
                 <Text />
-                <ImgWrapper01
+                <ImgWrapper primary={false}
                     style={{ y: y1 }}
                 >
-                    <ImgSec img="/images/what_02.jpg" page={true} primary={true} />
-                </ImgWrapper01>
-                <ImgWrapper02
+                    <Img img="/images/what_01.jpg" h={40} w={75} />
+                </ImgWrapper>
+                <ImgWrapper primary={false}
                     style={{ y: y2 }}
                 >
-                    <ImgSec img="/images/what_03.jpg" page={true} primary={true} />
-                </ImgWrapper02>
-                <ImgWrapper03
+                    <Img img="/images/what_02.jpg" h={35} w={65} />
+                </ImgWrapper>
+                <ImgWrapper primary={false} 
                     style={{ y: y3 }}
                 >
-                    <ImgSec img="/images/what_04.jpg" page={true} primary={true} />
-                </ImgWrapper03>
+                    <Img img="/images/what_03.jpg" h={27} w={37} />
+                </ImgWrapper>
             </Container>
 
         </>

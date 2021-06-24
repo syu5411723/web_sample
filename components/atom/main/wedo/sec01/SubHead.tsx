@@ -4,10 +4,11 @@ import styled from 'styled-components'
 
 const TextWrapper = styled.div`
     width:100vw;
-    height:100%;
+    height:40px;
     display:flex;
     justify-content:center;
     margin-bottom: 40px;
+    overflow:hidden;
 `
 
 const Text = styled(motion.h3)`
@@ -15,12 +16,20 @@ const Text = styled(motion.h3)`
     letter-spacing: 2px;
     color:#fff;
 ` 
+const textV = {
+    hidden: {y : "-40px"},
+    visible: {y: "0px", transition: {type : "spring", stiffness: 100 ,delay:1.7} }
+}
 
 const SubHead = () => {
     return (
         <>
             <TextWrapper>
-                <Text>WHAT WE DO</Text>
+                <Text
+                    variants={textV}
+                    initial="hidden"
+                    animate="visible"
+                >WHAT WE DO</Text>
             </TextWrapper>
         </>
     )

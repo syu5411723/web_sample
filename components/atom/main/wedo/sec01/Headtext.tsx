@@ -2,34 +2,37 @@
 import { motion } from "framer-motion"
 import { VFC } from "react"
 
-const Text02 = styled(motion.h2) `
+const Text = styled(motion.h2)`
     font-size: 40px;
     letter-spacing: 30px;
     color:#fff;
-    margin-bottom: 40px;
+    height:100%;
 `
 
 
 type Props = {
-    text : string
+    text: string
     delay: number
 }
 
 
 
-const Headtext = ({text, delay}) => {
+const Headtext = ({ text, delay }) => {
     const textV = {
-        hidden:{y : "-30px"},
-        visible:{y: "0px", transition:{duration:0.3, delay:0.5}}
+        hidden: { opacity: 0, y: "50px" },
+        visible: { opacity: 1, y: "0px", transition: { type: "spring", stiffness: 100, delay: `${delay}` } }
     }
 
     return (
         <>
-            <Text02
-                initial={{y : "-30px" }}
-                animate={{y : "0px"}}
-                transition={{duration: 0.3 , delay:0}}
-            >{text}</Text02>
+            <Text
+                variants={textV}
+                initial="hidden"
+                animate="visible"
+            // initial={{y : "-30px" }}
+            // animate={{y : "0px"}}
+            // transition={{duration: 0.3 , delay:0}}
+            >{text}</Text>
         </>
     )
 }

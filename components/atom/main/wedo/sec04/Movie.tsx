@@ -4,12 +4,13 @@ import styled from "styled-components"
 const Wrapper = styled.div`
     position:absolute;
     right: 5%;
+    top: -40%;
 `
 
 const Inner = styled.div`
     height: 60vw;
     width: 30vw;
-    position:relative;
+    /* position:relative; */
 `
 
 

@@ -17,10 +17,9 @@ const Container = styled.div<Size>`
     height: ${({ small }) => small ? "310px" : "300px"};
     margin: 0 auto;
     cursor: pointer;
-
 `
 const BottonContainer = styled.div<Size>`
-    background-color:#000;
+    background-color:#111;
     width:${({ small }) => small ? "70%" : "100%"};
     height: ${({ small }) => small ? "75%" : "100%"};
     cursor: pointer;
