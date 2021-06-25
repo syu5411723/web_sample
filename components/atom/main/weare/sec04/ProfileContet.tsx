@@ -9,7 +9,7 @@ const Text = styled.p`
 `
 
 type Props = {
-    content: string
+    content: any
 }
 const ProfileContet:VFC<Props> = ({content}) => {
     return (

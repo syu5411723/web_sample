@@ -3,10 +3,9 @@ import styled from 'styled-components'
 
 import MainThumb from '../../../molecule/main/design/MainThumb'
 import Bg from '../../../atom/main/weare/sec04/Bg'
-import Person from '../../../molecule/main/weare/Person'
-import ProfileContet from '../../../atom/main/weare/sec04/ProfileContet'
 import Button from '../../../molecule/main/design/Button'
 import { motion, useTransform, useViewportScroll } from 'framer-motion'
+import Person from '../../../molecule/main/weare/Person'
 
 
 const Container = styled.div`
@@ -20,13 +19,6 @@ const Inner = styled.div`
 const ThumbWrapper = styled(motion.div)`
     margin-left: 100px;
 `
-
-const ProfileWrapper = styled.div`
-    width:80vw;
-    max-width:800px;
-    margin: 0 auto;
-`
-
 
 const Sec04 = () => {
     const { scrollYProgress } = useViewportScroll();

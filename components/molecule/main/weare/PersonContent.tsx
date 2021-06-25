@@ -1,12 +1,20 @@
-﻿import React from 'react'
+﻿
+import styled from "styled-components"
 
-const PersonContent = () => {
+import { ProfileContet } from "../../../atom/main/weare/sec04"
+
+const ProfileWrapper = styled.div`
+width:80vw;
+max-width:800px;
+margin: 0 auto;
+`
+const PersonContent = ({content}) => {
     return (
         <>
             <ProfileWrapper>
-                <ProfileContet content={data.content} />
+                <ProfileContet content={content} />
             </ProfileWrapper>
-        </>
+    </>
     )
 }
 
