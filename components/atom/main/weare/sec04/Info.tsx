@@ -18,7 +18,7 @@ type Props = {
 
 const Info:VFC<Props> = ({info}) => {
     const { scrollYProgress } = useViewportScroll();
-    const y = useTransform(scrollYProgress, [0.3, 0.4], [0, -100])
+    const y = useTransform(scrollYProgress, [0.35, 0.52], [0, -60])
     return (
         <>
             <Wrapper

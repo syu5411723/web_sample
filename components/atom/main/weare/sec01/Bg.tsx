@@ -11,13 +11,21 @@ const BgWrapper = styled(motion.div)`
     z-index:1;
     top:100px;
 `
+const V ={
+    hidden : {x: "-100vw"},
+    visible: {x: "0", transition: {duration: 0.6, delay: 1.8}}
+}
 
 
 
 const Bg = () => {
     return (
         <>
-            <BgWrapper />
+            <BgWrapper 
+                variants={V}
+                initial="hidden"
+                animate="visible"
+            />
         </>
     )
 }

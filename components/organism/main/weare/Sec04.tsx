@@ -3,10 +3,10 @@ import styled from 'styled-components'
 
 import MainThumb from '../../../molecule/main/design/MainThumb'
 import Bg from '../../../atom/main/weare/sec04/Bg'
-import Person from '../../../molecule/main/design/Person'
+import Person from '../../../molecule/main/weare/Person'
 import ProfileContet from '../../../atom/main/weare/sec04/ProfileContet'
 import Button from '../../../molecule/main/design/Button'
-import { personData } from "./PersonData"
+import { motion, useTransform, useViewportScroll } from 'framer-motion'
 
 
 const Container = styled.div`
@@ -17,42 +17,31 @@ const Container = styled.div`
 const Inner = styled.div`
     margin-bottom: 150px;
 `
-const ThumbWrapper = styled.div`
+const ThumbWrapper = styled(motion.div)`
     margin-left: 100px;
 `
-const Wrapper = styled.div`
-    position: relative;
-    width:100vw;
-    height: 53vw;
-    margin-top: 200px;
-`
+
 const ProfileWrapper = styled.div`
     width:80vw;
     max-width:800px;
     margin: 0 auto;
 `
 
+
 const Sec04 = () => {
+    const { scrollYProgress } = useViewportScroll();
+    const y = useTransform(scrollYProgress, [0.33, 0.45], [0, 100]);
     return (
         <>
             <Container>
                 <Inner>
                     <Bg />
-                    <ThumbWrapper>
+                    <ThumbWrapper
+                        style={{y : y}}
+                    >
                         <MainThumb text01="OUR TEAM" text02="WISDOM OF" text03="CROEDS" text04="" primary={true} />
                     </ThumbWrapper>
-                    {personData.map((data) => (
-                        <>
-                            <Wrapper>
-                                <Person name={data.name} img={data.img} info={data.info} />
-                            </Wrapper>
-                            <ProfileWrapper>
-                                <ProfileContet content={data.content} />
-                            </ProfileWrapper>
-                        </>
-                    ))}
-
-
+                    <Person />
                 </Inner>
                 <Button text="CAREER" ButtonBool={true} small={true} />
             </Container>

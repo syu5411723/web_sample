@@ -6,15 +6,12 @@ import {Container, ImgWrapper,  } from  "../style"
 
 
 type Props = {
-    page: boolean
     img: string
-    primary: boolean
 }
 
-const Sec05Img:VFC<Props> = ({ page, primary, img }) => {
+const Sec05Img:VFC<Props> = ({ img }) => {
     const { scrollYProgress } = useViewportScroll();
-    const y = useTransform(scrollYProgress, [0.8, 0.95], [0, -100])
-    if (page && primary === false ) {
+    const y = useTransform(scrollYProgress, [0.27, 0.415], [0, -80])
         return (
             <>
                 <Container>
@@ -26,8 +23,5 @@ const Sec05Img:VFC<Props> = ({ page, primary, img }) => {
                 </Container>
             </>
         )
-    } else {
-        return null
-    }
 }
 export default Sec05Img

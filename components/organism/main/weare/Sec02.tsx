@@ -5,6 +5,7 @@ import Text from "../../../atom/main/weare/sec02/Text"
 const Container = styled.div`
     width:100%;
     height:300px;
+    margin-top: 100px;
 `
 const Inner = styled(motion.div)`
     width:90vw;
@@ -13,9 +14,8 @@ const Inner = styled(motion.div)`
 `
 
 const Sec02 = () => {
-    const { scrollY } = useViewportScroll();
     const { scrollYProgress } = useViewportScroll();
-    const y = useTransform(scrollY, [400, 800], [0, 40])
+    const y = useTransform(scrollYProgress, [0.04, 0.2], [0, 70])
     return (
         <>
             <Container>

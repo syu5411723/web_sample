@@ -3,7 +3,6 @@ import styled from "styled-components"
 
 import Bg from "../../../atom/main/weare/sec01/Bg"
 import Img from "../../../atom/main/weare/sec01/Img"
-import Img02 from "../../../atom/main/weare/sec01/Img02"
 import MainThumb from "../../../molecule/main/design/MainThumb"
 
 
@@ -18,26 +17,32 @@ const ThumbWrapper = styled(motion.div)`
     top: 130px;
     left: 100px;
 `
-const ImgWrapper = styled.div`
-
+const ImgWrapper = styled(motion.div)`
 `
 
+const thumbV = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { duration: 0.5, delay: 2.2 } }
+}
 
 
 const Sec01 = () => {
-    const { scrollY } = useViewportScroll();
-    const y = useTransform(scrollY, [10, 400], [0, 50])
+    const { scrollYProgress } = useViewportScroll();
+    const y = useTransform(scrollYProgress, [0, 0.1], [0, 130])
     return (
         <>
             <Container>
                 <Bg />
                 <ThumbWrapper
                     style={{ y: y }}
+                    variants={thumbV}
+                    initial="hidden"
+                    animate="visible"
                 >
-                    <MainThumb text01="WHO WE ARE" text02="WE ARE" text03="SUPER CROWDS" />
+                    <MainThumb text01="WHO WE ARE" text02="WE ARE" text03="SUPER CROWDS" text04="" primary={true} />
                 </ThumbWrapper>
-                <Img />
-                <Img02 />
+                    <Img img="/images/who_01.jpg" primary={true} delay={2.5} />
+                    <Img img="/images/who_02.jpg" primary={false}  delay={2.7} />
             </Container>
         </>
     )
