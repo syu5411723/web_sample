@@ -3,6 +3,7 @@
 import FooterTitle from "../../atom/footer/FooterTitle"
 import FooterLogo from "../../atom/footer/FooterLogo"
 import FooterContact from "../../atom/footer/FooterContact"
+import { VFC } from "react"
 
 const Container = styled.div`
     width: 100%;
@@ -17,15 +18,18 @@ const FooterInner = styled.div`
     justify-content:space-between;
 
 `
+type Props = {
+    primary: boolean
+}
 
 
-const Footer = () => {
+const Footer:VFC<Props> = ({primary}) => {
     return (
         <>
             <Container>
                 <FooterInner>
-                    <FooterTitle />
-                    <FooterContact />
+                    <FooterTitle  primary={primary} />
+                    <FooterContact primary={primary} />
                     {/* <FooterLogo img="/images/social-fb.png" />
                     <FooterLogo img="/images/social-tw.png" /> */}
                 </FooterInner>

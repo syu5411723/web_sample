@@ -21,7 +21,7 @@ const WeAreMain = () => {
                 <Sec05 />
                 <Sec06 />
                 <Sec07 />
-                <Footer /> 
+                <Footer primary={true} /> 
             </Container>
         </>
     )

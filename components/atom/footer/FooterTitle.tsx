@@ -1,5 +1,7 @@
 ﻿import styled from "styled-components"
 import { motion } from "framer-motion"
+import { VFC } from "react"
+import { Props } from "framer-motion/types/types"
 
 const Wrappper = styled(motion.div)`
     display:flex;
@@ -18,19 +20,35 @@ const Span = styled.p`
 const textV = {
     hover: { color: "#fff", transition: { duration: 0.5 } }
 }
+const textSubV = {
+    hover: { color: "#000", transition: { duration: 0.5 } }
+}
+type Prpos = {
+    primary: boolean
+}
 
-
-
-const FooterTitle = () => {
+const FooterTitle: VFC<Props> = ({ primary }) => {
     return (
         <>
-            <Wrappper
-                variants={textV}
-                whileHover="hover"
-            >
-                <Span>&copy;</Span>
-                <Text>2021&nbsp;Super&nbsp;Crowds&nbsp;Inc</Text>
-            </Wrappper>
+            {primary ? (
+                <Wrappper
+                    variants={textSubV}
+                    whileHover="hover"
+                >
+                    <Span>&copy;</Span>
+                    <Text>2021&nbsp;Super&nbsp;Crowds&nbsp;Inc</Text>
+                </Wrappper>
+
+            ) : (
+                <Wrappper
+                    variants={textV}
+                    whileHover="hover"
+                >
+                    <Span>&copy;</Span>
+                    <Text>2021&nbsp;Super&nbsp;Crowds&nbsp;Inc</Text>
+                </Wrappper >
+            )}
+
         </>
     )
 }
