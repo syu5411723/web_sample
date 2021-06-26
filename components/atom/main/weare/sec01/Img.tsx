@@ -20,7 +20,7 @@ const ImgWrapper = styled(motion.div) <Style>`
 type Props = {
     img: string
     primary: boolean
-    delay: number
+    delay: any
 }
 
 const Img: VFC<Props> = ({ primary, img, delay }) => {

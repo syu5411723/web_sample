@@ -46,7 +46,7 @@ const Person = () => {
                 >
                     <Name name="syuki-maekawa" />
                 </NameWrapper>
-                <Card img="/public/images/who_06.png" />
+                <Card img="/images/miki_sumino-shadow.png" />
                 <InfoWrapper
                     style={{ y: info01 }}
                 >
@@ -60,7 +60,7 @@ const Person = () => {
                 >
                     <Name name="syuki-maekawa" />
                 </NameWrapper>
-                <Card img="/public/images/who_06.png" />
+                <Card img="/images/miki_sumino-shadow.png" />
                 <InfoWrapper
                     style={{ y: info02 }}
                 >
@@ -74,7 +74,7 @@ const Person = () => {
                 >
                     <Name name="syuki-maekawa" />
                 </NameWrapper>
-                <Card img="/public/images/who_06.png" />
+                <Card img="/images/miki_sumino-shadow.png" />
                 <InfoWrapper
                     style={{ y: info03 }}
                 >
@@ -88,7 +88,7 @@ const Person = () => {
                 >
                     <Name name="syuki-maekawa" />
                 </NameWrapper>
-                <Card img="/public/images/who_06.png" />
+                <Card img="/images/miki_sumino-shadow.png" />
                 <InfoWrapper
                     style={{ y: info04 }}
                 >
@@ -102,7 +102,7 @@ const Person = () => {
                 >
                     <Name name="syuki-maekawa" />
                 </NameWrapper>
-                <Card img="/public/images/who_06.png" />
+                <Card img="/images/miki_sumino-shadow.png" />
                 <InfoWrapper
                     style={{ y: info05 }}
                 >

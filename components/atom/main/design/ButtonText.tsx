@@ -5,7 +5,7 @@ type Size = {
     small: boolean
 }
 const Text = styled.div<Size>`
-    font-size: ${({small}) => small ? "12px" : "3.1vw"};
+    font-size: ${({small}) => small ? "12px" : "30px"};
     letter-spacing:3px;
     color: #fff;
     white-space:nowrap;

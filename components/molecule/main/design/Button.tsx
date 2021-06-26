@@ -47,8 +47,8 @@ const arrowV = {
     open: { x: "4%", transition: { duration: 0.4 } }
 }
 const arrowV02 ={
-    closed: { x: "-65px", transition: { duration: 0.4 } },
-    open: { x: "15px", transition: { duration: 0.4 } }
+    closed: { x: "-72px", transition: { duration: 0.4 } },
+    open: { x: "10px", transition: { duration: 0.4 } }
 }
 
 type Props = {

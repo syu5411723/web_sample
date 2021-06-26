@@ -28,7 +28,7 @@ const thumbV = {
 
 const Sec01 = () => {
     const { scrollYProgress } = useViewportScroll();
-    const y = useTransform(scrollYProgress, [0, 0.1], [0, 130])
+    const y = useTransform(scrollYProgress, [0, 0.1], [0, 180])
     return (
         <>
             <Container>

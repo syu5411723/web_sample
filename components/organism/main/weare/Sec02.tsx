@@ -15,7 +15,7 @@ const Inner = styled(motion.div)`
 
 const Sec02 = () => {
     const { scrollYProgress } = useViewportScroll();
-    const y = useTransform(scrollYProgress, [0.04, 0.2], [0, 70])
+    const y = useTransform(scrollYProgress, [0.04, 0.2], [0, 100])
     return (
         <>
             <Container>
