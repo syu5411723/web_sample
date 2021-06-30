@@ -6,7 +6,7 @@ import Footer from "../../molecule/footer/Footer"
 const Container = styled.div`
     margin-top: 200px;
     position:relative;
-    z-index:1;
+    z-index:10;
 
 `
 

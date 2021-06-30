@@ -1,4 +1,4 @@
-﻿import {VFC , useState} from 'react'
+﻿import { VFC, useState } from 'react'
 import Link from 'next/link'
 import styled from "styled-components"
 
@@ -10,10 +10,9 @@ import SideText from '../../atom/main/left/SideText'
 const Container = styled.div`
     position:fixed;
     top:50%;
-    left: -30px;
+    left: -49px;
     transform: rotate(90deg);
-    z-index: 2;
-
+    z-index: 20;
 `
 const Links = styled(Link)`
     color: #333;
@@ -22,10 +21,10 @@ const TextWrapper = styled.a`
     cursor: pointer;
 `
 type Props = {
-    color : string
+    color: string
 }
 
-const MainLeft: VFC<Props> = ({color}) => {
+const MainLeft: VFC<Props> = ({ color }) => {
     const [leftOpen, setLeftOpen] = useState(false);
     const handleChange = () => {
         setLeftOpen(!leftOpen);
@@ -38,12 +37,11 @@ const MainLeft: VFC<Props> = ({color}) => {
             <AnimateLine leftOpen={leftOpen} />
             <Links href="/page/weare">
                 <Container
+                    onMouseLeave={handleChange}
+                    onMouseEnter={handleChange}
                 >
-                    <TextWrapper
-                        onMouseLeave={handleChange}
-                        onMouseEnter={handleChange}
-                    >
-                        <SideText  leftOpen={leftOpen} color={color} />
+                    <TextWrapper>
+                        <SideText leftOpen={leftOpen} color={color} />
                     </TextWrapper>
                     <Line leftOpen={leftOpen} />
                 </Container>

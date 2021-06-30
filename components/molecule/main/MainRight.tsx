@@ -10,17 +10,15 @@ import SideText from '../../atom/main/right/SideText'
 const Container = styled.div`
     position:fixed;
     top:50%;
-    right: -30px;
+    right: -50px;
     transform: rotate(90deg);
-    z-index: 2;
-
+    z-index: 20;
+    cursor: pointer;
 `
 const Links = styled(Link)`
     color: #333;
 `
-const TextWrapper = styled.a`
-    cursor: pointer;
-`
+const TextWrapper = styled.a``
 
 const MainRight = () => {
     const [isOpen, setOpen] = React.useState(false);
@@ -32,18 +30,17 @@ const MainRight = () => {
             <SideBg
                 isOpen={isOpen}
             />
-            <AnimateLine isOpen={isOpen}/>
+            <AnimateLine isOpen={isOpen} />
             <Links href="/page/wedo" >
-            <Container
-            >
-                <Line isOpen={isOpen} />
-                <TextWrapper
+                <Container
                     onMouseLeave={RightChange}
                     onMouseEnter={RightChange}
                 >
-                <SideText isOpen={isOpen} />
-                </TextWrapper>
-            </Container>
+                    <Line isOpen={isOpen} />
+                    <TextWrapper>
+                        <SideText isOpen={isOpen} />
+                    </TextWrapper>
+                </Container>
             </Links>
         </>
     )

@@ -8,7 +8,7 @@ const ChnagePage = styled(motion.div)`
     width: 100vw;
     height: 100vh;
     background-color: #333;
-    z-index: 3;
+    z-index: 20;
 `
 
 const pageV = {

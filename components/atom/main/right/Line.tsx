@@ -3,10 +3,10 @@ import { VFC } from 'react'
 import styled from "styled-components"
 
 const LineWrapper = styled.div`
-display:flex;
-flex-direction:column;
-justify-content:space-between;
-align-items:center;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    align-items:center;
 `
 const lineV = {
     closed: { opacity: 1 },

@@ -9,7 +9,7 @@ import MainThumb from "../../../molecule/main/design/MainThumb"
 const Container = styled.div`
     height: 800px;
     position : relative;
-    background-color: #fff;
+    /* background-color: #fff; */
 `
 const ThumbWrapper = styled(motion.div)`
     position:absolute;

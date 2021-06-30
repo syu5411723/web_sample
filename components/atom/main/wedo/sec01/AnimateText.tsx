@@ -19,15 +19,15 @@ const AnimateText = ({text01, text02, text03, text04, text05, text06, text07, te
     return (
         <>
             <Wrapper>
-                <Headtext text={text01} delay={1.7} />
-                <Headtext text={text02} delay={1.71} />
-                <Headtext text={text03}delay={1.72} />
-                <Headtext text={text04} delay={1.73} />
-                <Headtext text={text05} delay={1.74} />
-                <Headtext text={text06} delay={1.75} />
-                <Headtext text={text07} delay={1.76} />
-                <Headtext text={text08} delay={1.77} />
-                <Headtext text={text09} delay={1.78} />
+                <Headtext text={text01} delay={2} />
+                <Headtext text={text02} delay={2.01} />
+                <Headtext text={text03}delay={2.02} />
+                <Headtext text={text04} delay={2.03} />
+                <Headtext text={text05} delay={2.04} />
+                <Headtext text={text06} delay={2.05} />
+                <Headtext text={text07} delay={2.06} />
+                <Headtext text={text08} delay={2.07} />
+                <Headtext text={text09} delay={2.08} />
             </Wrapper>
         </>
     )

@@ -15,6 +15,7 @@ const ContetntWrapper = styled.div`
     position:absolute;
     top:15%;
     left:10.5%;
+    z-index:1;
 `
 
 const Thumbnail = () => {
@@ -22,7 +23,7 @@ const Thumbnail = () => {
         <>
             <Container>
                 <TitleWrapper>
-                    <Title />
+                    <Title  text="OUR SERVICES" />
                 </TitleWrapper>
                 <ContetntWrapper>
                     <HeadText text="SYNERGY EFFECT OF" />

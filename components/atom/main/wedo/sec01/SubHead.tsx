@@ -18,7 +18,7 @@ const Text = styled(motion.h3)`
 ` 
 const textV = {
     hidden: {y : "-40px"},
-    visible: {y: "0px", transition: {type : "spring", stiffness: 100 ,delay:1.7} }
+    visible: {y: "0px", transition: {type : "spring", stiffness: 100 ,delay:1.9} }
 }
 
 const SubHead = () => {
