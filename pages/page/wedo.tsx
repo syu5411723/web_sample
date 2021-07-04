@@ -9,7 +9,7 @@ const wedo = () => {
     return (
         <>
             <Header color="#fff" />
-            <PageBlack bg="#000" />
+            <PageBlack primary={false} />
             <ChangeLink />
             <MainLeft color="#fff" />
             <WeDoMain />

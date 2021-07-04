@@ -7,8 +7,10 @@ import ImgAnimate from '../../../molecule/main/wedo/sec03/ImgAnimate'
 
 const Container = styled.div`
     position:relative;
+    margin-top: 300px;
 `
-const BgWrapper = styled.div``
+const Wrapper = styled.div``
+
 
 const thumbV = {
     hidden:{opacity: 0,},
@@ -24,14 +26,14 @@ const Sec03 = () => {
         <>
             <Container>
                     <Thumbnail />
-                <BgWrapper
+                <Wrapper
                     ref={ref}
                 >
                     <Bg />
-                </BgWrapper>
-                <ImgAnimate img="/images/brand_1.png" size={18} top={40} left={30} zIndex={1} delay={1.22} inView={inView} />
-                <ImgAnimate img="/images/brand_2.png" size={20} top={60} left={40} zIndex={2} delay={1.24} inView={inView} />
-                <ImgAnimate img="/images/brand_3.png" size={30} top={30} left={52} zIndex={1} delay={1.26} inView={inView} />
+                </Wrapper>
+                <ImgAnimate img="/images/brand_1.png" size={18} top={30} left={30} zIndex={1} delay={1.22} inView={inView} animateDelay={0} />
+                <ImgAnimate img="/images/brand_2.png" size={20} top={40} left={40} zIndex={2} delay={1.24} inView={inView} animateDelay={1}  />
+                <ImgAnimate img="/images/brand_3.png" size={30} top={30} left={52} zIndex={1} delay={1.26} inView={inView} animateDelay={2} />
                 <Number inView={inView} />
             </Container>
         </>

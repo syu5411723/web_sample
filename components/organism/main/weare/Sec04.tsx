@@ -22,7 +22,7 @@ const ThumbWrapper = styled(motion.div)`
 
 const Sec04 = () => {
     const { scrollYProgress } = useViewportScroll();
-    const y = useTransform(scrollYProgress, [0.33, 0.45], [0, 100]);
+    const y = useTransform(scrollYProgress, [0.33, 0.45], [0, 150]);
     return (
         <>
             <Container>

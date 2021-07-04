@@ -19,6 +19,7 @@ const ContetntWrapper = styled.div`
 `
 
 const Thumbnail = () => {
+    
     return (
         <>
             <Container>

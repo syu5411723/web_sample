@@ -9,8 +9,8 @@ const Text = styled.p`
 `
 
 const textV = {
-    hidden: { opcity: 0, y: "" },
-    visible: { opacity: 1, y: "", transition: { duration: 0.4, delay: 0.3 } },
+    hidden: { opacity: 0, y: "-100px" },
+    visible: { opacity: 1, y: "0px", transition: { duration: 0.5} },
 }
 type Props = {
     text: string

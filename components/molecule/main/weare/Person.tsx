@@ -34,7 +34,7 @@ const Person = () => {
     const info03 = useTransform(scrollYProgress, [0.6, 0.68], [0, -80])
     const name04 = useTransform(scrollYProgress, [0.66, 0.75], [0, -100])
     const info04 = useTransform(scrollYProgress, [0.7, 0.78], [0, -80])
-    const name05 = useTransform(scrollYProgress, [0.75, 0.82], [0, -100])
+    const name05 = useTransform(scrollYProgress, [0.75, 0.84], [0, -100])
     const info05 = useTransform(scrollYProgress, [0.77, 0.85], [0, -80])
 
 

@@ -9,37 +9,16 @@ const ContentText = styled.p`
     color: #fff;
     font-size: 13px;
     line-height:30px;
+    margin-bottom: 15px;
 `
 type Props = {
     content: string
-    delay: number
-    inView: boolean
-    primary: boolean
 }
 
-const ContentItem: VFC<Props> = ({ content, delay, inView, primary }) => {
-    const wrappeV = {
-        hidden: { opacity: 0, y: "40px" },
-        visible: { opacity: 1, y: "0", transition: { type: "spring", stiffness: 100, delay: `${delay}` } }
-    }
-
+const ContentItem: VFC<Props> = ({ content }) => {
     return (
         <>
-            {primary ? (
-                <>
-                    <ContentText>{content}</ContentText>
-                </>
-            ) : (
-                <>
-                    <Wrapper
-                        variants={wrappeV}
-                        animate={inView ? "visible" : "hidden"}
-                    >
-                        <ContentText>{content}</ContentText>
-                    </Wrapper >
-                </>
-            )}
-
+            <ContentText>{content}</ContentText>
         </>
     )
 }

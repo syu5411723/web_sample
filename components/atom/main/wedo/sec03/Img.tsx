@@ -11,11 +11,13 @@ type Props = {
     zIndex: number
     delay: number
     inView: any
+    animateDelay: any
 }
 
 
-const Img: VFC<Props> = ({inView, img, size, top, left, zIndex, delay }) => {
-    const ImgContainer = styled.div`
+
+const Img: VFC<Props> = ({inView, img, size, top, left, zIndex, delay ,animateDelay  }) => {
+    const ImgContainer = styled(motion.div)`
         position:absolute;
         top: ${top}%;
         left: ${left}%;
@@ -26,13 +28,20 @@ const Img: VFC<Props> = ({inView, img, size, top, left, zIndex, delay }) => {
         height: ${size}vw;
         position:relative;
     `
+    const animateV = {
+        hidden: {y: 0},
+        visible: {y: [0, 100, 0], transition: {duration: 4, loop: Infinity, delay: `${animateDelay}`}}
+    }
     const wrapperV = {
         hidden: { opacity: 0, y: "40px" },
         visible: { opacity: 1, y: "0px", transition: { type: "spring", stiffness: 100 , delay: `${delay}` } }
     }
     return (
         <>
-            <ImgContainer>
+            <ImgContainer
+                variants={animateV}
+                animate={inView ? "visible" : "hidden"}
+            >
                 <ImgWrapper
                     variants={wrapperV}
                     initial="hidden"

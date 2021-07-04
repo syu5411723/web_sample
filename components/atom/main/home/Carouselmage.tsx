@@ -6,7 +6,7 @@ const ImageContainer = styled.div`
     width:80%;
     height:85%;
     position:absolute;
-    z-index:3;
+    z-index:20;
     margin-top: 5vh;
     border-radius: 5px;
 `
