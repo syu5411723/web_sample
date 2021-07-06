@@ -1,4 +1,5 @@
 ﻿import styled from "styled-components"
+
 import HomeImage from "../../organism/main/home/HomeImage"
 
 const Container = styled.div`

@@ -1,14 +1,10 @@
-﻿import { motion } from 'framer-motion'
-import React from 'react'
-import styled from 'styled-components'
+﻿import styled from 'styled-components'
 
-import AnimateText from '../../../../atom/main/wedo/sec01/AnimateText'
+import { AnimateText } from '../../../../atom/main/wedo/sec01'
 
 const Wrapper = styled.div`
     text-align:center;
 `
-
-
 
 const Head = () => {
     return (

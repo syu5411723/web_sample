@@ -1,22 +1,36 @@
-﻿import { motion } from 'framer-motion'
-import React from 'react'
-import styled from 'styled-components'
-// import Head from '../../../atom/main/wedo/sec01/Head'
+﻿import styled from 'styled-components'
+
 import Head from '../../../molecule/main/wedo/sec01/Head'
-import SubHead from '../../../atom/main/wedo/sec01/SubHead'
+import { SubHead, Bg } from '../../../atom/main/wedo/sec01'
+import { motion, useTransform, useViewportScroll } from 'framer-motion'
+
+
 
 const Container = styled.div`
     margin-top: 100px;
+    position:relative;
+`
+const ThumbWrapper = styled(motion.div)`
+    position: absolute;
+    z-index:25;
+    top: 10%;
+    left: 0;
 `
 
 
-
 const Sec01 = () => {
+    const { scrollYProgress } = useViewportScroll();
+    const y = useTransform(scrollYProgress, [0, 0.12], [0, 200])
     return (
         <>
             <Container>
-                <SubHead/>
-                <Head />
+                <Bg />
+                <ThumbWrapper
+                    style={{y: y}}
+                >
+                    <SubHead />
+                    <Head />
+                </ThumbWrapper>
             </Container>
         </>
     )

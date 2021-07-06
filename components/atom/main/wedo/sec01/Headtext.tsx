@@ -17,7 +17,7 @@ type Props = {
 
 
 
-const Headtext = ({ text, delay }) => {
+const Headtext:VFC<Props> = ({ text, delay  }) => {
     const textV = {
         hidden: { opacity: 0, y: "50px" },
         visible: { opacity: 1, y: "0px", transition: { type: "spring", stiffness: 100, delay: `${delay}` } }
