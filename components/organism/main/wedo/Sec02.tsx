@@ -1,11 +1,14 @@
 ﻿import { motion, useTransform, useViewportScroll } from "framer-motion"
 import { useInView } from "react-intersection-observer"
 import styled from "styled-components"
+
+import Arrow from "../../../molecule/main/wedo/sec02/Arrow"
 import Text from "../../../atom/main/wedo/sec02/Text"
 
 const Container = styled.div`
     width:100%;
     margin-top: 500px;
+    position:relative;
 `
 const Inner = styled(motion.div)`
     width: 87vw;
@@ -27,6 +30,7 @@ const sec02 = () => {
     return (
         <>
             <Container>
+                <Arrow />
                 <Inner
                     ref={ref}
                     variants={textV}

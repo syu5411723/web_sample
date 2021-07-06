@@ -1,8 +1,8 @@
 ﻿import { motion, useTransform, useViewportScroll } from "framer-motion"
 import styled from "styled-components"
 
-import BgImg from "./BgImg"
-import Png from "./Png"
+import BgImg from "../../../../atom/main/wedo/sec01/BgImg"
+import Png from "../../../../atom/main/wedo/sec01/Png"
 
 const BgContainer = styled.div`
     width: 100vw;

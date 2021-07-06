@@ -12,7 +12,11 @@ type Props = {
     left: number
     y: any
 }
-
+const imgV = {
+    hidden:{opacity: 0},
+    visible: {opacity: 1, trasition: {duration: 0.5, delay: 1.2}}
+    
+}
 
 const BgImg: VFC<Props> = ({ width, height, src, top, left, y }) => {
     const ImgWrapper = styled(motion.div)`
@@ -20,17 +24,20 @@ const BgImg: VFC<Props> = ({ width, height, src, top, left, y }) => {
         z-index: 0;
         top: ${top}%;
         left: ${left}%;
-        /* z-index:10; */
     `
-    const ImgInner = styled.div`
+    const ImgInner = styled(motion.div)`
         width: ${width}vw;
         height: ${height}vw;
         position:relative;
     `
     return (
         <>
-            <ImgWrapper style={{y: y}} >
-                <ImgInner>
+            <ImgWrapper style={{y: y}}>
+                <ImgInner
+                    variants={imgV}
+                    initial="hidden"
+                    animate="visible"
+                >
                     <Image src={src} layout="fill" objectFit="cover" />
                 </ImgInner>
             </ImgWrapper>
