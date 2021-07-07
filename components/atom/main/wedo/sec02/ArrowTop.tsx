@@ -20,8 +20,8 @@ const lineV = {
     visible: {
         y: [-130, 60, 40, 50, 100 ],
         transition: {
-            duration: 5,
-            times: [0, 0.4, 0.6, 0.8, 1],
+            duration: 4,
+            times: [0, 0.2, 0.6, 0.825, 0.9],
             loop: Infinity,
         }
     }

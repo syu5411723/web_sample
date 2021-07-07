@@ -11,7 +11,7 @@ const Container = styled.div`
     position:relative;
 `
 const Inner = styled(motion.div)`
-    width: 87vw;
+    width: 85vw;
     margin: 0 auto;
     padding-bottom: 100px;
 `
