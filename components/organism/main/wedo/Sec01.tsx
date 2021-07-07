@@ -1,20 +1,18 @@
 ﻿import styled from 'styled-components'
 
 import Head from '../../../molecule/main/wedo/sec01/Head'
-import { SubHead, Bg } from '../../../atom/main/wedo/sec01'
+import { SubHead } from '../../../atom/main/wedo/sec01'
 import { motion, useTransform, useViewportScroll } from 'framer-motion'
 
 
 
 const Container = styled.div`
-    margin-top: 100px;
+    margin-top: 150px;
     position:relative;
+    z-index:10;
 `
 const ThumbWrapper = styled(motion.div)`
-    position: absolute;
-    z-index:25;
-    top: 10%;
-    left: 0;
+
 `
 
 
@@ -24,7 +22,6 @@ const Sec01 = () => {
     return (
         <>
             <Container>
-                <Bg />
                 <ThumbWrapper
                     style={{y: y}}
                 >

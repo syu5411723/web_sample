@@ -73,8 +73,8 @@ const line03V = {
     }
 }
 const wrpperV = {
-    hidden: {y: 0},
-    visible: {y: "-10px", transition: {duration:1, delay:2.75, ease: "easeOut", loop: Infinity, reapeatDelay: 4 }}
+    hidden: {y: -5},
+    visible: {y: -10, transition: {duration:1, delay:2.75, ease: "easeOut", loop: Infinity, repeatDelay: 3 }}
 }
 
 const ArrowBottom = () => {
