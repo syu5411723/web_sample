@@ -13,7 +13,7 @@ const BgWrapper = styled(motion.div)`
 ` 
 const wrapperV = {
     closed: {x: "0%"},
-    open: {x: "20%", transition: {duration: 0.5, ease: [0,.85,.81,1]}},
+    open: {x: "13%", transition: {duration: 0.5, ease: [0,.85,.81,1]}},
 }
 type Props = {
     leftOpen : boolean 

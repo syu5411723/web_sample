@@ -1,5 +1,5 @@
 ﻿import { motion } from 'framer-motion'
-import  { VFC } from 'react'
+import { VFC } from 'react'
 import styled from 'styled-components'
 
 
@@ -17,29 +17,48 @@ const contaienrV = {
     hidden: { x: "100vw" },
     visible: { x: "0vw", transition: { duration: 1, delay: 0.5 } }
 }
-const AfterContainer = styled(motion.div)<Props>`
+const AfterContainer = styled(motion.div) <Props>`
     position:fixed;
     top:0;
     left: 100;
-    background-color: ${({primary}) => primary ? "#fff" : "#000"};
     width:100vw;
     height: 100vh;
     z-index:10;
+    background-color:${({ page }) =>
+        page === "wedo" && "#000" ||
+        page === "weare" && "#fff"
+    };
+
 `
 type Props = {
-    primary: boolean
+    page: string
 }
 
-const PageBlack: VFC<Props> = ({ primary }) => {
+const PageBlack: VFC<Props> = ({ page }) => {
     return (
         <>
             <BeforeContainer />
-            <AfterContainer
-                primary={primary}
-                variants={contaienrV}
-                initial="hidden"
-                animate="visible"
-            />
+            {page === "wedo" && (
+                <>
+                    <AfterContainer
+                        page={page}
+                        variants={contaienrV}
+                        initial="hidden"
+                        animate="visible"
+                    />
+                </>
+            ) || page === "weare" && (
+                <>
+                <AfterContainer
+                    page={page}
+                    variants={contaienrV}
+                    initial="hidden"
+                    animate="visible"
+                />
+            </>
+            ) || page === "home" &&  null}
+
+
         </>
     )
 }

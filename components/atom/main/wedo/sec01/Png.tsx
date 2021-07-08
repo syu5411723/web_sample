@@ -40,7 +40,7 @@ const wrapperV = {
 const Png = () => {
     const { scrollYProgress } = useViewportScroll();
     const y = useTransform(scrollYProgress, [0, 0.13], [0,50])
-    const opacity = useTransform(scrollYProgress, [0.09, 0.091], [1, 0]) 
+    // const opacity = useTransform(scrollYProgress, [0.09, 0.091], [1, 0]) 
 
     return (
         <>
@@ -48,7 +48,7 @@ const Png = () => {
                 // variants={wrapperV}
                 // initial="hidden"
                 // animate="visible"
-                style={{y: y , opacity:opacity}}
+                style={{y: y }}
             >
                 <PngInner>
                     <PngImg/>

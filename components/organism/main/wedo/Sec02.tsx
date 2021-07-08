@@ -33,15 +33,12 @@ const textV = {
 const sec02 = () => {
     const [ref, inView] = useInView({
         rootMargin: "-200px",
-        // triggerOnce: true,
+        triggerOnce: true,
     })
 
     return (
         <>
-            <BgWrapper
-                // variants={BgV}
-                // animate={inView02 ? "hidden" : "visible"}
-            >
+            <BgWrapper>
                 <Bg inView={inView} />
             </BgWrapper>
             <Container ref={ref} >

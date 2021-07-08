@@ -12,7 +12,7 @@ const Container = styled.div``
 const weare = () => {
     return (
         <>
-            <PageBlack primary={true} />
+            <PageBlack page="weare" />
             <ChangeLink />
             <MainRight />
             <Header color="#000" />

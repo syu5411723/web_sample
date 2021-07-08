@@ -45,10 +45,10 @@ const imgV = {
 
 const BgImg: VFC<Props> = ({ src, y, img }) => {
     const { scrollYProgress } = useViewportScroll();
-    const opacity = useTransform(scrollYProgress, [0.08, 0.081], [1, 0]) 
+    // const opacity = useTransform(scrollYProgress, [0.08, 0.081], [1, 0]) 
     return (
         <>
-            <ImgWrapper style={{ y: y , opacity: opacity }} img={img}
+            <ImgWrapper style={{ y: y  }} img={img}
                 variants={imgV}
                 initial="hidden"
                 animate="visible"
