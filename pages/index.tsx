@@ -50,7 +50,7 @@ const index = () => {
         </Inner>
       </Container>
       <LetterMotion />
-      {/* <PageBlack page="home" /> */}
+      <PageBlack page="home" />
     </>
   )
 }

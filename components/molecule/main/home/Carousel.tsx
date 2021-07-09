@@ -20,7 +20,7 @@ const Swiper = () => {
     return (
         <>
             <CarouselWrapper>
-                <CarouselImage images={images} displacmentImage="./images/displacementImages/2.jpg" />
+                <CarouselImage images={images} displacmentImage="./images/displacementImages/2.jpg" speed={2} />
             </CarouselWrapper>
         </>
     )

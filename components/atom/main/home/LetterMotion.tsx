@@ -1,4 +1,5 @@
-﻿import styled, { keyframes } from "styled-components"
+﻿import { useState } from "react"
+import styled, { keyframes , css} from "styled-components"
 
 const Container = styled.div`
     position:fixed;
@@ -32,13 +33,18 @@ const Animation = keyframes`
         transform: translateY(-97.82609%);
     }
 `
-const Img = styled.div`
+type SetTime ={
+    setTime: boolean
+}
+const Img = styled.div<SetTime>`
     position:absolute;
     width:100%;
     height:4600%;
     top:0;
     left:0;
-    animation: ${Animation} 2s steps(45) both;
+    ${({setTime}) => setTime && css`
+        animation: ${Animation} 2s steps(45) both;
+    `}
     &::before {
         content: url("/images/motion.svg");
         display:block;
@@ -47,17 +53,18 @@ const Img = styled.div`
     }
 `
 
-
 const LetterMotion = () => {
+    const [timed, setTimed ] = useState(false);
+    const handleTimed = setTimeout(() => {
+        setTimed(true);
+    }, 2000)
     return (
         <>
-            {/* <Container> */}
-                <Inner>
-                    <Wrapper>
-                        <Img />
-                    </Wrapper>
-                </Inner>
-            {/* </Container> */}
+            <Inner>
+                <Wrapper>
+                    <Img  setTime={timed} />
+                </Wrapper>
+            </Inner>
         </>
     )
 }

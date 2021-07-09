@@ -1,6 +1,9 @@
-﻿import { VFC, useEffect } from 'react'
+﻿import { VFC, useEffect, useContext } from 'react'
+import {  } from 'react'
 import { useDistortionEffectCarousel } from "distortion-effect-carousel"
 import styled from 'styled-components'
+
+import { TimeContext } from '../../../template/main/HomeMain'
 
 const ImageContainer = styled.div`
     width:80%;
@@ -19,16 +22,21 @@ const ImageWrapper = styled.div`
 type Props = {
     images: string[]
     displacmentImage: string
+    speed:number
 }
 
-const SwiperImage: VFC<Props> = ({ images, displacmentImage }) => {
-    const { ref, next, prev } = useDistortionEffectCarousel({ images, displacmentImage });
+const SwiperImage: VFC<Props> = ({ images, displacmentImage, speed }) => {
+    const { ref, next, prev, } = useDistortionEffectCarousel({ images, displacmentImage, speed });
+    const {time, setTime, handleTime} = useContext(TimeContext)
+
     useEffect(() => {
         const timer = setTimeout(() => {
-            prev()
+            if (time) {
+                prev()
+            } 
         }, 4000)
         return () => clearTimeout(timer);
-    })
+    });
     return (
         <>
             <ImageContainer>
