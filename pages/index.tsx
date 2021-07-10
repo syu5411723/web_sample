@@ -1,12 +1,13 @@
 import styled from "styled-components"
 import { motion } from "framer-motion"
+import React, { useContext, useEffect } from "react"
 
+import Layout, { ColorContext } from "../components/Layout"
 import Header from "../components/template/Header"
 import MainRight from "../components/molecule/main/MainRight"
 import MainLeft from "../components/molecule/main/MainLeft"
 import { HomeMain } from "../components/template/main/HomeMain"
 import LetterMotion from "../components/atom/main/home/LetterMotion"
-
 import PageBlack from "../components/atom/design/PageBlack"
 
 const Container = styled(motion.div)`
@@ -31,26 +32,50 @@ const innerV = {
 }
 
 const index = () => {
+  const { changeColor, setChangeColor } = useContext(ColorContext);
+  const times = [9000, 13000, 17000]
+  const handlechange = () => {
+    setChangeColor(!changeColor);
+  }
+  useEffect(() => {
+    // {times.map((time) => {
+    //   setTimeout(() => {
+    //     handlechange();
+    //   }, time)
+    // } )}
+    setTimeout(() => {
+      handlechange
+    }, 9000)
+    setTimeout(() => {
+      handlechange
+    }, 13000)
+    setTimeout(() => {
+      handlechange
+    }, 17000)
+  }, [])
+
   return (
     <>
-      <Container
-        variants={containerV}
-        initial="hidden"
-        animate="visible"
-      >
-        <Inner
-          variants={innerV}
+      <Layout>
+        <Container
+          variants={containerV}
           initial="hidden"
           animate="visible"
         >
-          <Header white={true} home={true} />
-          <MainLeft color="#333" />
-          <MainRight />
-          <HomeMain />
-        </Inner>
-      </Container>
-      <LetterMotion />
-      <PageBlack page="home" />
+          <Inner
+            variants={innerV}
+            initial="hidden"
+            animate="visible"
+          >
+            <Header white={changeColor} home={true} />
+            <MainLeft color="#333" />
+            <MainRight />
+            <HomeMain />
+          </Inner>
+        </Container>
+        <LetterMotion />
+        <PageBlack page="home" />
+      </Layout>
     </>
   )
 }

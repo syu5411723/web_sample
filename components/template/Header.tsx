@@ -10,6 +10,7 @@ const HeaderContainer  = styled.div<Props>`
     top:0;
     left: 0;
     color: ${({white}) => white ? "#fff" : "#333"};
+    transition: all .5s;
 `
 type Props = {
     home:boolean
