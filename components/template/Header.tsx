@@ -2,24 +2,26 @@
 import styled from 'styled-components'
 import HeaderInner from '../molecule/header/HeaderInner'
 
-const HeaderContainer  = styled.div`
+const HeaderContainer  = styled.div<Props>`
     position:fixed;
     width:100%;
     height: 80px;
     z-index: 99;
-    color: #000;
     top:0;
     left: 0;
+    color: ${({white}) => white ? "#fff" : "#333"};
 `
 type Props = {
-    color: string
+    home:boolean
+    white:boolean
 }
 
-const Header:VFC<Props> = ({color}) => {
+
+const Header:VFC<Props> = ({home, white}) => {
     return (
         <>
-            <HeaderContainer>
-                <HeaderInner  color={color}/>
+            <HeaderContainer white={white} home={home}  >
+                <HeaderInner />
             </HeaderContainer>
         </>
     )

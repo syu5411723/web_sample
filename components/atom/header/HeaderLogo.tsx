@@ -5,20 +5,17 @@ import styled from 'styled-components'
 const Links = styled(Link)`
     text-decoration:none;
 `
-type Props = {
-    color : string
-}
-
-const HeaderLogo:VFC<Props> = ({color}) => {
-    const Logo = styled.a`
+const Logo = styled.a`
     font-size:22px;
-    color:${color};
     letter-spacing:2px;
     cursor: pointer;
 `
+
+const HeaderLogo:VFC = () => {
+
     return (
         <>
-            <Links href="/">
+            <Links href="/"> 
                 <Logo>
                     SUPERCROUDS
                 </Logo>

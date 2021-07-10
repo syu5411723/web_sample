@@ -43,7 +43,7 @@ const index = () => {
           initial="hidden"
           animate="visible"
         >
-          <Header color="#000" />
+          <Header white={true} home={true} />
           <MainLeft color="#333" />
           <MainRight />
           <HomeMain />

@@ -8,22 +8,19 @@ const BgAnimation = keyframes`
     0% {
         background-color: #fff;
     }
-    22.2% {
-        background-color: #fff;
-    }
-    22.3% {
+    5% {
         background-color: #333;
     }
-    55.5% {
+    33.3% {
         background-color: #333;
     }
-    55.6% {
+    38.3% {
         background-color: #000;
     }
-    88.8% {
+    66.6% {
         background-color: #000;
     }
-    88.9% {
+    71.6% {
         background-color: #fff;
     }
     100% {
@@ -34,19 +31,9 @@ const Container = styled(motion.div)`
     width:100vw;
     height: 100vh;
     background-color: #fff;
-    animation: ${BgAnimation} infinite 18s ;
-    animation-delay:5s;
+    animation: ${BgAnimation} infinite 12s ;
+    animation-delay:9.1s;
 `
-
-// const containerV = {
-//     hidden: {},
-//     visible: {
-//         backgroundColor: ["#fff", "#fff", "#333", "#333", "#000", "#000", "#fff", "#fff",],
-//         transition: { duration: 12, delay: 5 },
-//         times: [0, 0.222, 0.223, 0.555, 0.556, 0.888, 0.889, 1],
-//         loop: Infinity,
-//     }
-// }
 export interface contextProps {
     time: boolean
     setTime: Dispatch<React.SetStateAction<boolean>>

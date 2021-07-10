@@ -7,19 +7,13 @@ const MenuWrapper = styled(Link)`
     align-items:center;
     text-decoration:none;
 `
-type Props = {
-    color: string
-}
-
-
-const HeaderProject:VFC<Props>  = ({color}) => {
-    const MenuText = styled.a`
+const MenuText = styled.a`
     font-size:16px;
     letter-spacing:3px;
-    color:${color};
     cursor: pointer;
 `
 
+const HeaderProject:VFC  = () => {
     return (
         <>
             <MenuWrapper href="/">

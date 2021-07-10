@@ -15,7 +15,7 @@ const weare = () => {
             <PageBlack page="weare" />
             <ChangeLink />
             <MainRight />
-            <Header color="#000" />
+            <Header white={false} home={false} />
             <WeAreMain />
         </>
     )

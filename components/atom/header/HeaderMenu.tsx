@@ -9,18 +9,16 @@ const MenuWrapper = styled.div`
     text-decoration:none;
 `
 const Links = styled(Link)``
-type Props = {
-    color: string
-}
 
-
-const HeaderMenu: VFC<Props> = ({ color }) => {
-    const Text = styled.a`
-    font-size:16px;
-    letter-spacing:10px;
-    color: ${color};
-    cursor: pointer;
+const Text = styled.a`
+font-size:16px;
+letter-spacing:10px;
+cursor: pointer;
 `
+
+
+const HeaderMenu: VFC = () => {
+
     return (
             <MenuWrapper>
                     <MenuIcon />

@@ -8,7 +8,7 @@ import WeDoMain from '../../components/template/main/WeDoMain'
 const wedo = () => {
     return (
         <>
-            <Header color="#fff" />
+            <Header white={true} home={false} />
             <PageBlack page="wedo" />
             <ChangeLink />
             <MainLeft color="#fff" />
