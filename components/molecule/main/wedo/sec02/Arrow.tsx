@@ -5,7 +5,7 @@ import ArrowBottom from "../../../../atom/main/wedo/sec02/ArrowBottom"
 
 const ArrowContaier = styled.div`
     position :absolute;
-    top:-25vw;
+    top: 55%;
     left: 50%;
 `
 

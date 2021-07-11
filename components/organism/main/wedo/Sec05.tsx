@@ -6,7 +6,7 @@ import Img from "../../../atom/main/wedo/sec05/Img"
 import Text from "../../../atom/main/wedo/sec05/Text"
 
 const Container = styled.div`
-    margin-top: 300px;
+    margin-top: 500px;
     position:relative;
     height:150vw;
     width:100%;
@@ -61,7 +61,6 @@ const Sec05 = () => {
                     <Img img="/images/what_03.jpg" />
                 </ImgWrapper03>
             </Container>
-
         </>
     )
 }

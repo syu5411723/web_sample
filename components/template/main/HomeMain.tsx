@@ -36,21 +36,18 @@ const Container = styled(motion.div)`
 `
 export interface contextProps {
     time: boolean
-    setTime: Dispatch<React.SetStateAction<boolean>>
-    handleTime: () => void
 }
 export const TimeContext = createContext({} as contextProps)
 
 export const HomeMain = () => {
     const [time, setTime] = useState(false);
-    const handleTime = () => setTime(true);
     const swiperTime = setTimeout(() => {
         setTime(true)
     }, 5000);
     return (
         <>
             <Container className={time && "animate" }>
-                <TimeContext.Provider value={{ time, setTime, handleTime }}>
+                <TimeContext.Provider value={{ time }}>
                     <HomeImage />
                 </TimeContext.Provider>
             </Container>

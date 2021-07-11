@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { motion } from "framer-motion"
 import React, { useContext, useEffect } from "react"
 
-import Layout, { ColorContext } from "../components/Layout"
+import Layout from "../components/Layout"
 import Header from "../components/template/Header"
 import MainRight from "../components/molecule/main/MainRight"
 import MainLeft from "../components/molecule/main/MainLeft"
@@ -32,28 +32,6 @@ const innerV = {
 }
 
 const index = () => {
-  const { changeColor, setChangeColor } = useContext(ColorContext);
-  const times = [9000, 13000, 17000]
-  const handlechange = () => {
-    setChangeColor(!changeColor);
-  }
-  useEffect(() => {
-    // {times.map((time) => {
-    //   setTimeout(() => {
-    //     handlechange();
-    //   }, time)
-    // } )}
-    setTimeout(() => {
-      handlechange
-    }, 9000)
-    setTimeout(() => {
-      handlechange
-    }, 13000)
-    setTimeout(() => {
-      handlechange
-    }, 17000)
-  }, [])
-
   return (
     <>
       <Layout>
@@ -67,7 +45,7 @@ const index = () => {
             initial="hidden"
             animate="visible"
           >
-            <Header white={changeColor} home={true} />
+            <Header white={false} />
             <MainLeft color="#333" />
             <MainRight />
             <HomeMain />

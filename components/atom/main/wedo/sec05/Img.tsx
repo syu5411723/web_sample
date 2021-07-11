@@ -4,18 +4,19 @@ import { motion } from "framer-motion"
 import Image from "next/image"
 
 
+const ImgWrapper = styled(motion.div)`
+`
+
 type Props = {
     img: string
 }
 
 const Img = ({ img  }) => {
-    const ImgWrapper = styled(motion.div)`
-    `
+
 
         return (
             <>
-                    <ImgWrapper
-                    >
+                    <ImgWrapper>
                         <Image src={img} objectFit="cover" layout="fill" />
                     </ImgWrapper>
             </>

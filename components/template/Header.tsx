@@ -9,19 +9,18 @@ const HeaderContainer  = styled.div<Props>`
     z-index: 99;
     top:0;
     left: 0;
-    color: ${({white}) => white ? "#fff" : "#333"};
-    transition: all .5s;
+    color: #fff;
+    mix-blend-mode:difference;
+
 `
 type Props = {
-    home:boolean
     white:boolean
 }
 
-
-const Header:VFC<Props> = ({home, white}) => {
+const Header:VFC<Props> = ({ white}) => {
     return (
         <>
-            <HeaderContainer white={white} home={home}  >
+            <HeaderContainer white={white}  >
                 <HeaderInner />
             </HeaderContainer>
         </>

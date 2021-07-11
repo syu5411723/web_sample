@@ -8,6 +8,7 @@ import Text02 from "../../../atom/main/design/Text02"
 const TextWrapper = styled(motion.div)`
     width: 500px;
     line-height: 50px;
+    margin-bottom: 30px;
 `
 const TextInner = styled(motion.div)``
 

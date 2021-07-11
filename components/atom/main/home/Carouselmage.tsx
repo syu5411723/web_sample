@@ -27,7 +27,7 @@ type Props = {
 
 const SwiperImage: VFC<Props> = ({ images, displacmentImage, speed }) => {
     const { ref, next, prev, } = useDistortionEffectCarousel({ images, displacmentImage, speed });
-    const {time, setTime, handleTime} = useContext(TimeContext)
+    const {time } = useContext(TimeContext)
 
     useEffect(() => {
         const timer = setTimeout(() => {

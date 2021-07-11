@@ -7,9 +7,10 @@ import Arrow from "../../../molecule/main/wedo/sec02/Arrow"
 import Text from "../../../atom/main/wedo/sec02/Text"
 
 const Container = styled.div`
-    width:100%;
+    /* width:100%;
     margin-top: 500px;
-    position:relative;
+    position:relative; */
+    /* position:absolute; */
 `
 const Inner = styled(motion.div)`
     width: 85vw;

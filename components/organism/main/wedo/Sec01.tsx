@@ -7,11 +7,10 @@ import { motion, useTransform, useViewportScroll } from 'framer-motion'
 
 
 const Container = styled.div`
-    margin-top: 150px;
-    position:relative;
-    z-index:10;
+
 `
 const ThumbWrapper = styled(motion.div)`
+    height:100vw;
 
 `
 

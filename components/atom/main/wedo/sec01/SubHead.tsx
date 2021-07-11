@@ -15,10 +15,10 @@ const Text = styled(motion.h3)`
     font-size: 15px;
     letter-spacing: 2px;
     color:#fff;
-` 
+`
 const textV = {
-    hidden: {y : "-40px"},
-    visible: {y: "0px", transition: {type : "spring", stiffness: 100 ,delay:1.9} }
+    hidden: { oapcity: 0, y: "-40px" },
+    visible: { opacity: 1, y: "0px", transition: { type: "spring", stiffness: 100, delay: 1.9 } }
 }
 
 const SubHead = () => {
