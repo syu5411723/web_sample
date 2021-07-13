@@ -6,7 +6,7 @@ import Img from "../../../atom/main/wedo/sec05/Img"
 import Text from "../../../atom/main/wedo/sec05/Text"
 
 const Container = styled.div`
-    margin-top: 500px;
+    margin-top: 700px;
     position:relative;
     height:150vw;
     width:100%;
@@ -38,9 +38,9 @@ const ImgWrapper03 = styled(motion.div)`
 
 const Sec05 = () => {
     const { scrollYProgress } = useViewportScroll();
-    const y1 = useTransform(scrollYProgress, [0.45, 0.7], [0, -100])
-    const y2 = useTransform(scrollYProgress, [0.62, 0.85], [0, -100])
-    const y3 = useTransform(scrollYProgress, [0.64, 0.85], [0, 100])
+    const y1 = useTransform(scrollYProgress, [0.6, 0.8], [0, 100])
+    const y2 = useTransform(scrollYProgress, [0.72, 0.9], [0, -100])
+    const y3 = useTransform(scrollYProgress, [0.75, 0.9], [0, 150])
     return (
         <>
             <Container>

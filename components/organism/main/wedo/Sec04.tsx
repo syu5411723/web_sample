@@ -12,7 +12,8 @@ const Container = styled.div`
     margin-top: 400px;
 `
 const ContentInner = styled.div`
-    margin-top: 90px;
+    margin-top: 130px;
+    margin-bottom: 200px;
 `
 const Inner = styled.div`
     position:relative;
@@ -39,7 +40,7 @@ const Sec04 = () => {
         triggerOnce: true,
     })
     const { scrollYProgress } = useViewportScroll()
-    const y = useTransform(scrollYProgress, [0.42, 0.56], [0, 200])
+    const y = useTransform(scrollYProgress, [0.44, 0.64], [0, 200])
     return (
         <>
             <Container>

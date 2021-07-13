@@ -5,7 +5,7 @@ import Text from "../../../atom/main/weare/sec02/Text"
 const Container = styled.div`
     width:100%;
     height:300px;
-    margin-top: 100px;
+    margin-top: 200px;
 `
 const Inner = styled(motion.div)`
     width:90vw;

@@ -27,9 +27,9 @@ type Props = {
 }
 
 const containerv = {
-    hidden: {x:"-50px"},
-    visible: {x: 0 , transition: {duration: 2 ,ease: "" }},
-    exit: {x:"-50px", transition:{duration: 0.4,}}
+    hidden: {x:"-50px", rotate: 90},
+    visible: {x: 0 ,ratate: 90, transition: {duration: 2 , delay:1.5 ,ease: "" }},
+    exit: {x:"-50px", rotate: 90,transition:{duration: 0.4,}}
 }
 
 const MainLeft: VFC<Props> = ({ color }) => {

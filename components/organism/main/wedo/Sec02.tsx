@@ -22,7 +22,7 @@ const BgWrapper = styled(motion.div)`
 `
 const BgV = {
     hidden: { opacity: 0 },
-    visible: { opacity: 1, },
+    visible: { opacity: 1, transition:{duration: 1,delay:1.6}},
 }
 const textV = {
     hidden: { opacity: 0, y: "-80px" },

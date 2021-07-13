@@ -2,7 +2,9 @@
 
 import ImgSec from '../../../atom/main/design/ImgSec'
 
-const Cotainer = styled.div``
+const Cotainer = styled.div`
+    margin-top: 100px;
+`
 
 const Sec06 = () => {
     return (

@@ -13,7 +13,7 @@ type Props = {
 
 const Sec05Img:VFC<Props> = ({ page, primary, img }) => {
     const { scrollYProgress } = useViewportScroll();
-    const y = useTransform(scrollYProgress, [0.8, 0.95], [0, -100])
+    const y = useTransform(scrollYProgress, [0.85, 1], [0, -100])
     if (page && primary === false ) {
         return (
             <>

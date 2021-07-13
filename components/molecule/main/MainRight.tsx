@@ -22,10 +22,11 @@ const Links = styled(Link)`
     color: #333;
 `
 const TextWrapper = styled.a``
+
 const containerV = {
-    hidden: {x: "50px"},
-    visible: {x: 0 ,transtion: {duration: 2, ease: ""}},
-    exit: {x: "50px", transtion: {duration: 0.4}}
+    hidden: { x: "50px", rotate: 90 },
+    visible: { x: 0, ratate: 90, transition: { duration: 2, delay: 1.5, ease: "" } },
+    exit: { x: "50px", rotate: 90, transition: { duration: 0.4, } }
 }
 
 const MainRight = () => {

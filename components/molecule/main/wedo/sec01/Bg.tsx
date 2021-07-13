@@ -13,17 +13,14 @@ const BgContainer = styled(motion.div)`
     left:0;
 `
 const containerV = {
-    hidden:{opacity: 0, transition: {duration: 1}},
-    visible: {opacity: 1 , transition: {duration: 1}},
-}
-const transition = {
-    duration: 0.8
+    hidden:{opacity: 0, transition: {duration: 1, delay:1.6}},
+    visible: {opacity: 1 , transition: {duration: 1, delay:1.6}},
 }
 type Props = {
     inView: boolean
 }
 
-const Bg = ({inView}) => {
+const Bg:VFC<Props> = ({inView}) => {
     const { scrollYProgress } = useViewportScroll();
     const y = useTransform(scrollYProgress, [0, 0.1], [0, -10])
     const y2 = useTransform(scrollYProgress, [0, 0.1], [0, 100])

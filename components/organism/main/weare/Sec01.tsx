@@ -3,6 +3,7 @@ import styled from "styled-components"
 
 import Bg from "../../../atom/main/weare/sec01/Bg"
 import Img from "../../../atom/main/weare/sec01/Img"
+import MotionText from "../../../atom/main/weare/sec01/MotionText"
 import MainThumb from "../../../molecule/main/design/MainThumb"
 
 
@@ -32,6 +33,7 @@ const Sec01 = () => {
     return (
         <>
             <Container>
+                <MotionText />
                 <Bg />
                 <ThumbWrapper
                     style={{ y: y }}
