@@ -1,4 +1,4 @@
-﻿import {VFC} from 'react'
+﻿import React, { VFC } from 'react'
 import styled from "styled-components"
 
 import HeaderLogo from '../../atom/header/HeaderLogo'
@@ -14,14 +14,14 @@ const HeaderInnerWrapper = styled.div`
     margin:0 auto;
 `
 
-const HeaderInner:VFC = () => {
+const HeaderInner: VFC = () => {
     return (
         <>
-            <HeaderInnerWrapper >
-                <HeaderLogo />
-                <HeaderMenu />
-                <HeaderProject />
-            </HeaderInnerWrapper>
+                <HeaderInnerWrapper>
+                    <HeaderLogo />
+                    <HeaderMenu />
+                    <HeaderProject />
+                </HeaderInnerWrapper>
         </>
     )
 }

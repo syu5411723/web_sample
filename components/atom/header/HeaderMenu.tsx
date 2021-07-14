@@ -11,9 +11,9 @@ const MenuWrapper = styled.div`
 const Links = styled(Link)``
 
 const Text = styled.a`
-font-size:16px;
-letter-spacing:10px;
-cursor: pointer;
+    font-size:16px;
+    letter-spacing:10px;
+    cursor: pointer;
 `
 
 
