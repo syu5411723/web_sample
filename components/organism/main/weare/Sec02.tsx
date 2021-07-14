@@ -5,10 +5,11 @@ import Text from "../../../atom/main/weare/sec02/Text"
 const Container = styled.div`
     width:100%;
     height:300px;
-    margin-top: 200px;
+    margin-top: 15vw;
+    margin-bottom: 10vw;
 `
 const Inner = styled(motion.div)`
-    width:90vw;
+    width:70%;
     height:300px;
     margin: 0 auto;
 `
@@ -21,8 +22,8 @@ const Sec02 = () => {
             <Container>
                 <Inner style={{ y: y }}>
                     <Text LH={0} content="Super Crowdsは多種多様な個性とスキルを持った集団でモノづくりに取り組むクリエイティブ・ファームです。" />
-                    <Text LH={35} content="1人1人の個性やスキルを活かしながら、自分とは異なる存在、異なる思考、異なる手段を掛けあわせ、個人の想像の枠を超えたアウトプットを可能にするチームワークが私達の強み。" />
-                    <Text LH={35} content="1人1人の個性やスキルを活かしながら、自分とは異なる存在、異なる思考、異なる手段を掛けあわせ、個人の想像の枠を超えたアウトプットを可能にするチームワークが私達の強み。" />
+                    <Text LH={30} content="1人1人の個性やスキルを活かしながら、自分とは異なる存在、異なる思考、異なる手段を掛けあわせ、個人の想像の枠を超えたアウトプットを可能にするチームワークが私達の強み。" />
+                    <Text LH={30} content="1人1人の個性やスキルを活かしながら、自分とは異なる存在、異なる思考、異なる手段を掛けあわせ、個人の想像の枠を超えたアウトプットを可能にするチームワークが私達の強み。" />
                 </Inner>
             </Container>
 

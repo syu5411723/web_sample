@@ -9,11 +9,11 @@ const BgWrapper = styled(motion.div)`
     position:fixed;
     top: 0;
     left: 100%;
-    z-index: 10;
+    z-index: 20;
 ` 
 const wrapperV = {
     closed: {x: "0%"},
-    open: {x: "-13%", transition: {duration: 0.5, ease: [0,.85,.81,1]}},
+    open: {x: "-13%", transition: {type: "spring", stiffness: "150"}},
 }
 type Props = {
     isOpen: boolean

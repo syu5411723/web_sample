@@ -1,13 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: Brown-Regular, "Noto Sans", HiraKakuProN-W3, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro W3", メイリオ, Meiryo, "ＭＳ Ｐゴシック", sans-serif;
+  font-family: 'Comfortaa', cursive;
 }
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Comfortaa', cursive;
 }
 
 a {

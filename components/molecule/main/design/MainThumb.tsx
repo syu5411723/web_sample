@@ -18,9 +18,10 @@ type Props = {
     text03: string
     text04: string
     primary: boolean
+    span: boolean
 }
 
-const MainThumb: VFC<Props> = ({ text01, text02, text03, text04, primary }) => {
+const MainThumb: VFC<Props> = ({ text01, text02, text03, text04, primary, span }) => {
 
     return (
         <>
@@ -30,7 +31,7 @@ const MainThumb: VFC<Props> = ({ text01, text02, text03, text04, primary }) => {
                 </TextInner>
                 <TextInner>
                         <Text02 primary={primary} text={text02} span={false} />
-                        <Text02 primary={primary} text={text03} span={false} />
+                        <Text02 primary={primary} text={text03} span={span} />
                         <Text02 primary={primary} text={text04} span={false} />
                 </TextInner>
             </TextWrapper>

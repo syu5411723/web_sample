@@ -11,7 +11,7 @@ const Text = styled.p`
 `
 
 const contentV = {
-    hidden : {opacity: 0, y: "50px"},
+    hidden : {opacity: 0, y: "100px"},
     visible: {opacity: 1 , y: "0px", transition:{duration: 0.5}}
 }
 

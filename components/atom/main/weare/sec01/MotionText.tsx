@@ -3,7 +3,7 @@
 const Wrapper = styled.div`
     width:26.7vw;
     height: 14.24vw;
-    top: 7vw;
+    top: -50%;
     left:-3%;
     position:absolute;
     z-index:2;
@@ -11,8 +11,8 @@ const Wrapper = styled.div`
 const Inner = styled.div`
     position:relative;
     overflow:hidden;
-    width: 28vw;
-    height:14.93vw;
+    width: 200px;
+    height:100px;
 `
 
 const TextAnimation = keyframes`

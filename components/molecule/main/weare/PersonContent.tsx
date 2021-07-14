@@ -8,13 +8,13 @@ width:80vw;
 max-width:800px;
 margin: 0 auto;
 `
-const PersonContent = ({content}) => {
+const PersonContent = ({ content }) => {
     return (
         <>
             <ProfileWrapper>
                 <ProfileContet content={content} />
             </ProfileWrapper>
-    </>
+        </>
     )
 }
 

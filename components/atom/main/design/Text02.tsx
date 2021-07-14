@@ -1,34 +1,42 @@
 ﻿import { VFC } from "react"
-import Image from "next/image"
 import styled from "styled-components"
 
-const TextInner = styled.div``
+import MotionText from "../weare/sec01/MotionText"
 
-const Text = styled.h1<Color>`
-    font-size: 50px;
-    font-weight:lighter;
-    color: ${({primary}) => primary ? "#000" : "#fff"};
+const TextInner = styled.div`
+    position:relative;
+
 `
-type Color ={
+
+const Text = styled.h1<Style>`
+    font-size: 55px;
+    font-weight:lighter;
+    color: ${({ primary }) => primary ? "#000" : "#fff"};
+    margin-top: ${({span}) => span ? "25px" : "10px"};
+    margin-left: ${({span}) => span ? "185px" : "0"};
+`
+type Style = {
     primary: boolean
+    span: boolean
 }
 type Props = {
     text: string
     span: boolean
     primary: boolean
 }
+
 const Text02: VFC<Props> = ({ text, span, primary }) => {
     return (
         <>
             <TextInner>
-                {span && (
+                {span ? (
                     <>
-                        {/* <Image src="/images/motion_letter.svg" width={200} height={100}  /> */}
-                        <Text primary={primary}>{text}</Text>
+                        <MotionText />
+                        <Text span={span} primary={primary}>{text}</Text>
                     </>
+                ) : (
+                    <Text span={false} primary={primary}>{text}</Text>
                 )}
-                {!span && <Text primary={primary}>{text}</Text>}
-
             </TextInner>
         </>
     )

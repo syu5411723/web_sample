@@ -3,7 +3,6 @@ import styled from "styled-components"
 
 import Bg from "../../../atom/main/weare/sec01/Bg"
 import Img from "../../../atom/main/weare/sec01/Img"
-import MotionText from "../../../atom/main/weare/sec01/MotionText"
 import MainThumb from "../../../molecule/main/design/MainThumb"
 
 
@@ -33,7 +32,6 @@ const Sec01 = () => {
     return (
         <>
             <Container>
-                <MotionText />
                 <Bg />
                 <ThumbWrapper
                     style={{ y: y }}
@@ -41,7 +39,7 @@ const Sec01 = () => {
                     initial="hidden"
                     animate="visible"
                 >
-                    <MainThumb text01="WHO WE ARE" text02="WE ARE" text03="SUPER CROWDS" text04="" primary={true} />
+                    <MainThumb text01="WHO WE ARE" text02="WE ARE" text03="CROWDS" text04="" primary={true} span={true} />
                 </ThumbWrapper>
                     <Img img="/images/who_01.jpg" primary={true} delay={2.5} />
                     <Img img="/images/who_02.jpg" primary={false}  delay={2.7} />

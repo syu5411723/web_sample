@@ -14,10 +14,18 @@ const Container = styled.div`
     position :relative;
 `
 const Inner = styled.div`
-    margin-bottom: 150px;
+    padding-bottom: 200px;
 `
 const ThumbWrapper = styled(motion.div)`
     margin-left: 100px;
+`
+const ButtonWrapper = styled.div`
+    position:absolute;
+    bottom: -4%;
+    left:50%;
+    z-index:20;
+    transform: translateX(-50%);
+
 `
 
 const Sec04 = () => {
@@ -29,13 +37,15 @@ const Sec04 = () => {
                 <Inner>
                     <Bg />
                     <ThumbWrapper
-                        style={{y : y}}
+                        style={{ y: y }}
                     >
-                        <MainThumb text01="OUR TEAM" text02="WISDOM OF" text03="CROEDS" text04="" primary={true} />
+                        <MainThumb text01="OUR TEAM" text02="WISDOM OF" text03="CROEDS" text04="" primary={true} span={false} />
                     </ThumbWrapper>
                     <Person />
                 </Inner>
-                <Button text="CAREER" ButtonBool={true} small={true} />
+                <ButtonWrapper>
+                    <Button text="CAREER" ButtonBool={true} small={true} />
+                </ButtonWrapper>
             </Container>
         </>
     )
