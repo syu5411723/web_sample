@@ -10,24 +10,22 @@ const LineWrapper = styled.div`
     position: fixed;
     top: 53%;
     left: 80px;
-    z-index: 2;
+    z-index: 30;
+`
+const Line = styled(motion.div)`
+    height:1px;
+    margin-top: 6px;
+    background-color: gray;
 `
 const lineV = {
     closed: {width: "0px"},
-    open: {width: "150px", transition: {duration:0.4}},
+    open: {width: "100px", transition: {duration:0.4}},
 }
 type Props = {
     leftOpen: boolean
 }
 
 const AnimateLine:VFC<Props> = ({leftOpen}) => {
-    const Line = styled(motion.div)`
-        width:1px;
-        height:1px;
-        margin-top: 6px;
-        background-color: gray;
-
-    `
     return (
         <>
             <LineWrapper>

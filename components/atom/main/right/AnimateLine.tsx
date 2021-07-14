@@ -8,26 +8,25 @@ const LineWrapper = styled.div`
     justify-content:space-between;
     align-items:center;
     position: fixed;
-    top: 51%;
+    top: 50%;
     right: 80px;
-    z-index: 2;
+    z-index: 30;
+`
+const Line = styled(motion.div)`
+    width:1px;
+    height:1px;
+    margin-top: 20px;
+    background-color: gray;
 `
 const lineV = {
     closed: {width: "0px"},
-    open: {width: "150px", transition: {duration:0.4}},
+    open: {width: "100px", transition: {duration:0.4}},
 }
 type Props = {
     isOpen : boolean
 }
 
 const AnimateLine:VFC<Props> = ({isOpen}) => {
-    const Line = styled(motion.div)`
-        width:1px;
-        height:1px;
-        margin-top: 20px;
-        background-color: gray;
-
-    `
     return (
         <>
             <LineWrapper>

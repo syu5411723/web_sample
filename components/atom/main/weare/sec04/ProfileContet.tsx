@@ -3,9 +3,7 @@ import { VFC } from "react"
 import { useInView } from "react-intersection-observer"
 import styled from "styled-components"
 
-const Wrapper = styled(motion.div)`
-
-`
+const Wrapper = styled(motion.div)``
 const Text = styled.p`
     font-size: 14px;
 `

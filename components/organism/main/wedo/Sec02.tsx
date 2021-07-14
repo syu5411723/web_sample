@@ -6,30 +6,15 @@ import { Bg } from "../../../atom/main/wedo/sec01"
 import Arrow from "../../../molecule/main/wedo/sec02/Arrow"
 import Text from "../../../atom/main/wedo/sec02/Text"
 
-const Container = styled.div`
-    /* width:100%;
-    margin-top: 500px;
-    position:relative; */
-    /* position:absolute; */
-`
+const Container = styled.div``
+const BgWrapper = styled(motion.div)``
 const Inner = styled(motion.div)`
-    width: 85vw;
+    position:relative;
+    z-index:10;
+    width: 70vw;
     margin: 0 auto;
     padding-bottom: 100px;
 `
-const BgWrapper = styled(motion.div)`
-
-`
-const BgV = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1, transition:{duration: 1,delay:1.6}},
-}
-const textV = {
-    hidden: { opacity: 0, y: "-80px" },
-    visible: { opacity: 1, y: "0px", transition: { duration: 0.5 } }
-}
-
-
 
 const sec02 = () => {
     const [ref, inView] = useInView({

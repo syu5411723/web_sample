@@ -12,9 +12,11 @@ const Container = styled.div`
     height:100%;
     width:100%;
     position :relative;
+    margin-top:-100px;
 `
 const Inner = styled.div`
     padding-bottom: 200px;
+    padding-top: 100px;
 `
 const ThumbWrapper = styled(motion.div)`
     margin-left: 100px;
@@ -39,7 +41,7 @@ const Sec04 = () => {
                     <ThumbWrapper
                         style={{ y: y }}
                     >
-                        <MainThumb text01="OUR TEAM" text02="WISDOM OF" text03="CROEDS" text04="" primary={true} span={false} />
+                        <MainThumb text01="OUR TEAM" text02="WISDOM OF" text03="CROEDS" text04="" text05="We make something that we would use myself." primary={true} span={false} />
                     </ThumbWrapper>
                     <Person />
                 </Inner>

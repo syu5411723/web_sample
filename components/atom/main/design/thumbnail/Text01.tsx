@@ -2,7 +2,7 @@
 import styled from "styled-components"
 
 const Text = styled.h3<Color>`
-    font-size: 15px;
+    font-size: 19px;
     font-weight: bold;
     color: ${({primary}) => primary ? "#000" : "#fff"};
 `

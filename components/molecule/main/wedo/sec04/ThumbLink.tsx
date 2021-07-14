@@ -5,6 +5,7 @@ import {Arrow, Title,} from "../../../../atom/main/wedo/sec04/index"
 const Wrapper = styled.div`
     display:flex;
     align-items:center;
+    position:relative;
 `
 
 

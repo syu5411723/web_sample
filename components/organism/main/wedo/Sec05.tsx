@@ -22,7 +22,7 @@ const ImgWrapper01 = styled(motion.div)`
 const ImgWrapper02 = styled(motion.div)`
     position:absolute;
     top:50%;
-    left: 20%;
+    left: 28%;
     width: 65vw;
     height: 35vw;
     z-index:1;
@@ -30,7 +30,7 @@ const ImgWrapper02 = styled(motion.div)`
 const ImgWrapper03 = styled(motion.div)`
     position:absolute;
     top:60%;
-    left: 12.5%;
+    left: 15.5%;
     width:37vw;
     height: 27vw;
     z-index:2;
@@ -38,7 +38,7 @@ const ImgWrapper03 = styled(motion.div)`
 
 const Sec05 = () => {
     const { scrollYProgress } = useViewportScroll();
-    const y1 = useTransform(scrollYProgress, [0.6, 0.8], [0, 100])
+    const y1 = useTransform(scrollYProgress, [0.6, 0.77], [0, 150])
     const y2 = useTransform(scrollYProgress, [0.72, 0.9], [0, -100])
     const y3 = useTransform(scrollYProgress, [0.75, 0.9], [0, 150])
     return (

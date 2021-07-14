@@ -5,6 +5,7 @@ const Content = styled.p`
     color: #fff;
     font-size: 13px;
     line-height:30px;
+    margin-bottom: 10px;
 `
 
 type Props = {

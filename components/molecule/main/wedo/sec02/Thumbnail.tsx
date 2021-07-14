@@ -14,8 +14,8 @@ const TitleWrapper = styled.div`
 const ContetntWrapper = styled.div`
     position:absolute;
     top:15%;
-    left:10.5%;
-    z-index:1;
+    left:13.5%;
+    z-index:50;
 `
 
 const Thumbnail = () => {

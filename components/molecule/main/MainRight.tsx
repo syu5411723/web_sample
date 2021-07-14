@@ -24,9 +24,9 @@ const Links = styled(Link)`
 const TextWrapper = styled.a``
 
 const containerV = {
-    hidden: { x: "50px", rotate: 90 },
-    visible: { x: 0, ratate: 90, transition: { duration: 2, delay: 1.5, ease: "" } },
-    exit: { x: "50px", rotate: 90, transition: { duration: 0.4, } }
+    hidden: {opacity: 0, x: "50px", rotate: 90 },
+    visible: {opacity: 1, x: 0, ratate: 90, transition: { duration: 2, delay:2, ease: "easeOut" } },
+    exit: {opacity: 0, x: "50px", rotate: 90, transition: { duration: 0.6, } }
 }
 
 const MainRight = () => {

@@ -5,7 +5,7 @@ import styled from "styled-components"
 const NameWrapper = styled(motion.div)`
     position:absolute;
     top: 30%;
-    left: 10%;
+    left: 15vw;
     z-index: 2;
 `
 const Text = styled.h2`

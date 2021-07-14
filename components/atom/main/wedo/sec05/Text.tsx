@@ -4,7 +4,7 @@ import styled, { css, keyframes } from "styled-components"
 const Wrapper = styled.div`
     position: absolute;
     top: 40%;
-    left: 6.5%;
+    left: 15%;
     z-index:20;
 
 `

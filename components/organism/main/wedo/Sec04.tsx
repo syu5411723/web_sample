@@ -17,7 +17,7 @@ const ContentInner = styled.div`
 `
 const Inner = styled.div`
     position:relative;
-    width:87%;
+    width:70%;
     margin:0 auto;
 `
 const ContentWrapper = styled.div`
@@ -27,6 +27,7 @@ const ContentWrapper = styled.div`
 const RightWrapper = styled.div`
     position:relative;
     width:40%;
+    right:-10%;
 `
 const LeftWrapper = styled(motion.div)`
     width:65%;
@@ -56,7 +57,7 @@ const Sec04 = () => {
                         <LeftWrapper
                             style={{ y: y }}
                         >
-                            <MainThumb text01="WHAT IS BRANDING" text02="WE PROVIDE" text03="SENSUOUS" text04="EXPERIENCE" primary={false} span={false} />
+                            <MainThumb text01="WHAT IS BRANDING" text02="WE PROVIDE" text03="SENSUOUS" text04="EXPERIENCE" text05="" primary={false} span={false} />
                             <div ref={ref} >
                                 <ContentItem content="私達が考えるブランディングとは「伝える」こと。そして、ただ伝えるだけではなく、大切にしているのが「人の五感を揺さぶる体験を提供する」こと。近年、デザインやブランディングの重要性が認知され始めましたが、まだまだ表面的な表現に留まってしまっている企業やサービス、製品が多いのが現状です" />
                                 <ContentItem content="私達は見栄えの良さだけにこだわるのではなく、まだ見ぬ誰かにきちんと「伝わる」アウトプットを心がけています。そしてその先にある、人の感情に訴え、行動を喚起する体験をデザインする「センシュアスデザイン」という考え方を重視しています" />

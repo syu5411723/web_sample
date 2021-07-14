@@ -3,7 +3,7 @@
 const Wrapper = styled.div`
     position:absolute;
     top:40%;
-    right:10%;
+    right:-5%;
 `
 const Line01 = styled.div`
     width: 45px;

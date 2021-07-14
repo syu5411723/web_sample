@@ -16,7 +16,6 @@ const Container = styled(motion.div)`
     z-index: 20;
     color: #fff;
     mix-blend-mode:difference;
-
 `
 const Links = styled(Link)``
 const TextWrapper = styled.a`
@@ -27,9 +26,9 @@ type Props = {
 }
 
 const containerv = {
-    hidden: {x:"-50px", rotate: 90},
-    visible: {x: 0 ,ratate: 90, transition: {duration: 2 , delay:1.5 ,ease: "" }},
-    exit: {x:"-50px", rotate: 90,transition:{duration: 0.4,}}
+    hidden: {opacity:0, x:"-50px", rotate: 90},
+    visible: {opacity: 1, x: 0 ,ratate: 90, transition: {duration: 2 , delay:2 ,ease: "easeOut" }},
+    exit: {opacity: 0, x:"-50px", rotate: 90,transition:{duration: 0.6,}}
 }
 
 const MainLeft: VFC<Props> = ({ color }) => {

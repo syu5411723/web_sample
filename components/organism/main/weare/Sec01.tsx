@@ -39,7 +39,7 @@ const Sec01 = () => {
                     initial="hidden"
                     animate="visible"
                 >
-                    <MainThumb text01="WHO WE ARE" text02="WE ARE" text03="CROWDS" text04="" primary={true} span={true} />
+                    <MainThumb text01="WHO WE ARE" text02="WE ARE" text03="CROWDS" text04="" text05="" primary={true} span={true} />
                 </ThumbWrapper>
                     <Img img="/images/who_01.jpg" primary={true} delay={2.5} />
                     <Img img="/images/who_02.jpg" primary={false}  delay={2.7} />

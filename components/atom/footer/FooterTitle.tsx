@@ -6,7 +6,7 @@ import { Props } from "framer-motion/types/types"
 const Wrappper = styled(motion.div)`
     display:flex;
     align-items:center;
-    color:#383838;
+    color:#555;
     cursor: pointer;
 `
 const Text = styled.p`

@@ -2,8 +2,7 @@
 import styled from 'styled-components'
 import { motion } from "framer-motion"
 
-import Text01 from "../../../atom/main/design/Text01"
-import Text02 from "../../../atom/main/design/Text02"
+import { Text01, Text02, Text03 } from "../../../atom/main/design/thumbnail"
 
 const TextWrapper = styled(motion.div)`
     width: 500px;
@@ -17,11 +16,12 @@ type Props = {
     text02: string
     text03: string
     text04: string
+    text05:string
     primary: boolean
     span: boolean
 }
 
-const MainThumb: VFC<Props> = ({ text01, text02, text03, text04, primary, span }) => {
+const MainThumb: VFC<Props> = ({ text01, text02, text03, text04, text05,primary, span }) => {
 
     return (
         <>
@@ -34,6 +34,8 @@ const MainThumb: VFC<Props> = ({ text01, text02, text03, text04, primary, span }
                         <Text02 primary={primary} text={text03} span={span} />
                         <Text02 primary={primary} text={text04} span={false} />
                 </TextInner>
+                <Text03 text={text05} />
+            
             </TextWrapper>
         </>
     )

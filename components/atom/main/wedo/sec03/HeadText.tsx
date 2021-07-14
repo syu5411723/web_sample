@@ -6,6 +6,9 @@ import styled from "styled-components"
 const Wrapper = styled(motion.div)``
 const Text = styled.h2`
     color: #fff;
+    font-family: 'Lora', serif;
+    font-size: 30px;
+    letter-spacing:2px;
 `
 type Props = {
     text: string

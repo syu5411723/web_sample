@@ -8,21 +8,23 @@ const LineWrapper = styled.div`
     justify-content:space-between;
     align-items:center;
 `
+const Line01 = styled(motion.div)`
+    position:relative;
+    z-index:100;
+    width:1px;
+    height:20px;
+    margin-bottom: 10px;
+    background-color: #fff;
+`
 const lineV = {
     closed: { opacity: 1 },
-    open: { opacity: 0, transition: { duration: 0.4 } },
+    open: { opacity: 0, transition: { duration: 0.4 , delay: 0.2 } },
 }
 type Props = {
     isOpen : boolean
 }
 
 const Line:VFC<Props> = ({ isOpen }) => {
-    const Line01 = styled(motion.div)`
-        width:1px;
-        height:20px;
-        margin-bottom: 10px;
-        background-color: rgba(1,1,1, 0.8);
-    `
     return (
         <>
             <LineWrapper>

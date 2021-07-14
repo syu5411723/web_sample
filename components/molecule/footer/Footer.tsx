@@ -8,6 +8,8 @@ import { VFC } from "react"
 const Container = styled.div`
     width: 100%;
     height: 250px;
+    position:relative;
+    z-index:10;
 `
 const FooterInner = styled.div`
     height:100%;

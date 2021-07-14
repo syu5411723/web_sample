@@ -1,7 +1,7 @@
 ﻿import { VFC } from "react"
 import styled from "styled-components"
 
-import MotionText from "../weare/sec01/MotionText"
+import MotionText from "../../weare/sec01/MotionText"
 
 const TextInner = styled.div`
     position:relative;
@@ -9,11 +9,11 @@ const TextInner = styled.div`
 `
 
 const Text = styled.h1<Style>`
-    font-size: 55px;
+    font-size: 70px;
     font-weight:lighter;
     color: ${({ primary }) => primary ? "#000" : "#fff"};
-    margin-top: ${({span}) => span ? "25px" : "10px"};
-    margin-left: ${({span}) => span ? "185px" : "0"};
+    margin-top: ${({span}) => span ? "60px" : "30px"};
+    margin-left: ${({span}) => span ? "270px" : "0"};
 `
 type Style = {
     primary: boolean

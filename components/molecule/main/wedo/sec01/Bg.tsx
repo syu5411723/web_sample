@@ -11,10 +11,11 @@ const BgContainer = styled(motion.div)`
     position:fixed;
     top: 10%;
     left:0;
+
 `
 const containerV = {
-    hidden:{opacity: 0, transition: {duration: 1, delay:1.6}},
-    visible: {opacity: 1 , transition: {duration: 1, delay:1.6}},
+    hidden:{opacity: 0, transition: {duration: 1, delay:2}},
+    visible: {opacity: 1 , transition: {duration: 1, delay:2}},
 }
 type Props = {
     inView: boolean

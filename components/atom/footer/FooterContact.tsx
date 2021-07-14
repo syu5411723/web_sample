@@ -4,7 +4,7 @@ import styled from "styled-components"
 
 
 const Wrapper = styled(motion.div)`
-    color: #383838;
+    color: #555;
     cursor: pointer;
 `
 const Text = styled.p`
