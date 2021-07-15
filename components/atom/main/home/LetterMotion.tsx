@@ -1,12 +1,9 @@
-﻿import { useState } from "react"
-import styled, { keyframes , css} from "styled-components"
+﻿import { motion } from "framer-motion"
+import { useState } from "react"
+import styled, { keyframes, css } from "styled-components"
 
-const Container = styled.div`
-    position:fixed;
-    width:100%;
-    height:100vh;
-    z-index:1000;
-`
+import LetterPath from "./LetterPath"
+
 const Inner = styled.div`
     width: 496px;
     height: 186px;
@@ -17,13 +14,12 @@ const Inner = styled.div`
     right:0;
     bottom:0;
 `
-const Wrapper = styled.div`
+const Wrapper = styled(motion.div)`
     width: 496px;
     height: 186px;
     position:relative;
     overflow:hidden;
-    z-index:1100;
-    opacity:1;
+    z-index:90;
 `
 const Animation = keyframes`
     from {
@@ -33,16 +29,16 @@ const Animation = keyframes`
         transform: translateY(-97.82609%);
     }
 `
-type SetTime ={
+type SetTime = {
     setTime: boolean
 }
-const Img = styled.div<SetTime>`
+const Img = styled(motion.div) <SetTime>`
     position:absolute;
     width:100%;
     height:4600%;
     top:0;
     left:0;
-    ${({setTime}) => setTime && css`
+    ${({ setTime }) => setTime && css`
         animation: ${Animation} 2s steps(45) both;
     `}
     &::before {
@@ -52,9 +48,13 @@ const Img = styled.div<SetTime>`
         height:100%;
     }
 `
+const wrapperV = {
+    hidden: { opacity: 1 },
+    visible: { opacity: 0, transition: { duration: 2.5, delay: 4 } }
+}
 
 const LetterMotion = () => {
-    const [timed, setTimed ] = useState(false);
+    const [timed, setTimed] = useState(false);
     const handleTimed = setTimeout(() => {
         setTimed(true);
     }, 2000)
@@ -62,7 +62,12 @@ const LetterMotion = () => {
         <>
             <Inner>
                 <Wrapper>
-                    <Img  setTime={timed} />
+                    <Img setTime={timed}
+                        variants={wrapperV}
+                        initial="hieen"
+                        animate="visible"
+                    />
+                    <LetterPath />
                 </Wrapper>
             </Inner>
         </>

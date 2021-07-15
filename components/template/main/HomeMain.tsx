@@ -9,16 +9,16 @@ const BgAnimation = keyframes`
         background-color: #fff;
     }
     5% {
-        background-color: #333;
+        background-color: #D0B2A2;
     }
     33.3% {
-        background-color: #333;
+        background-color: #D0B2A2;
     }
     38.3% {
-        background-color: #000;
+        background-color: #333;
     }
     66.6% {
-        background-color: #000;
+        background-color: #333;
     }
     71.6% {
         background-color: #fff;
