@@ -1,13 +1,14 @@
-﻿import React from 'react'
-import Link from 'next/link'
+﻿import React, { VFC } from 'react'
 import styled from "styled-components"
+import { motion } from 'framer-motion'
+
 
 import AnimateLine from '../../atom/main/right/AnimateLine'
 import Line from '../../atom/main/right/Line'
 import SideBg from '../../atom/main/right/SideBg'
 import SideText from '../../atom/main/right/SideText'
-import { motion } from 'framer-motion'
-import { TimeContext } from '../../Layout'
+import { RightContext } from '../../organism/main/home/Right'
+
 
 const Container = styled(motion.div)`
     position:fixed;
@@ -19,43 +20,30 @@ const Container = styled(motion.div)`
     color: #fff;
     mix-blend-mode:difference;
 `
-const Links = styled(Link)`
-    color: #333;
-`
-const TextWrapper = styled.a``
-
 const containerV = {
     hidden: { opacity: 0, x: "50px", rotate: 90 },
-    visible: { opacity: 1, x: 0, rotate: 90, transition: { duration: 2, ease: "easeOut" } },
+    visible: { opacity: 1, x: 0, rotate: 90, transition: { duration: 2, delay: 1.8, ease: "easeOut" } },
     exit: { opacity: 0, x: "50px", rotate: 90, transition: { duration: 0.6, } }
 }
+type Porps = {
+    time: boolean
+}
 
-const MainRight = () => {
-    const [isOpen, setOpen] = React.useState(false);
-    const RightChange = () => {
-        setOpen(!isOpen);
-    }
-    const { time } = React.useContext(TimeContext);
+const MainRight: VFC<Porps> = ({ time }) => {
+    const { open, handleChange } = React.useContext(RightContext)
     return (
         <>
-            <SideBg
-                isOpen={isOpen}
-            />
-            <AnimateLine isOpen={isOpen} />
-            <Links href="/page/wedo" scroll={false}>
-                <Container
-                    variants={containerV}
-                    animate={time ? "visible" : "hidden"}
-                    exit="exit"
-                    onMouseLeave={RightChange}
-                    onMouseEnter={RightChange}
-                >
-                    <Line isOpen={isOpen} />
-                    <TextWrapper>
-                        <SideText isOpen={isOpen} />
-                    </TextWrapper>
-                </Container>
-            </Links>
+            <Container
+                variants={containerV}
+                animate={time ? "visible" : "hidden"}
+                exit="exit"
+                onMouseLeave={handleChange}
+                onMouseEnter={handleChange}
+            >
+                <Line isOpen={open} />
+                <SideText isOpen={open} />
+            </Container>
+
         </>
     )
 }

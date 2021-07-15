@@ -1,10 +1,10 @@
 ﻿import styled from 'styled-components'
 
 import PageBlack from '../../components/atom/design/PageBlack'
-import MainRight from '../../components/molecule/main/MainRight'
 import ChangeLink from '../../components/atom/design/ChangeLink'
 import WeAreMain from '../../components/template/main/WeAreMain'
 import Layout from '../../components/Layout'
+import Right from '../../components/organism/main/home/Right'
 
 
 const Container = styled.div``
@@ -15,7 +15,7 @@ const weare = () => {
             <Layout>
                 <PageBlack page="weare" />
                 <ChangeLink />
-                <MainRight />
+                <Right home={false} />
                 <WeAreMain />
                 
             </Layout>

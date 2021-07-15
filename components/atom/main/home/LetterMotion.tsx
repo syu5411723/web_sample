@@ -50,7 +50,7 @@ const Img = styled(motion.div) <SetTime>`
 `
 const wrapperV = {
     hidden: { opacity: 1 },
-    visible: { opacity: 0, transition: { duration: 2.5, delay: 4 } }
+    visible: { opacity: 0, transition: { duration: 2.5, delay: 4.3 } }
 }
 
 const LetterMotion = () => {

@@ -1,8 +1,8 @@
 ﻿import PageBlack from '../../components/atom/design/PageBlack'
-import MainLeft from '../../components/molecule/main/MainLeft'
 import ChangeLink from '../../components/atom/design/ChangeLink'
 import WeDoMain from '../../components/template/main/WeDoMain'
 import Layout from '../../components/Layout'
+import Left from '../../components/organism/main/home/Left'
 
 const wedo = () => {
     return (
@@ -10,7 +10,7 @@ const wedo = () => {
             <Layout>
                 <PageBlack page="wedo" />
                 <ChangeLink />
-                <MainLeft />
+                <Left  home={false} />
                 <WeDoMain />
             </Layout>
         </>

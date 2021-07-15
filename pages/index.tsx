@@ -3,8 +3,8 @@ import { motion } from "framer-motion"
 import React from "react"
 
 import Layout from "../components/Layout"
-import MainRight from "../components/molecule/main/MainRight"
-import MainLeft from "../components/molecule/main/MainLeft"
+import Right from "../components/organism/main/home/Right"
+import Left from "../components/organism/main/home/Left"
 import { HomeMain } from "../components/template/main/HomeMain"
 import LetterMotion from "../components/atom/main/home/LetterMotion"
 import PageBlack from "../components/atom/design/PageBlack"
@@ -32,8 +32,8 @@ const index = () => {
           initial="hidden"
           animate="visible"
         >
-            <MainLeft />
-            <MainRight />
+            <Right home={true} />
+            <Left  home={true}/>
               <HomeMain />
         </Container>
         <ChangeLink />
