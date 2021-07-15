@@ -3,7 +3,7 @@ import {  } from 'react'
 import { useDistortionEffectCarousel } from "distortion-effect-carousel"
 import styled from 'styled-components'
 
-import { TimeContext } from '../../../../pages'
+import { TimeContext } from '../../../Layout'
 
 const ImageContainer = styled.div`
     width:80%;

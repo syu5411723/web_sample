@@ -2,7 +2,6 @@
 import { VFC } from 'react'
 import styled from 'styled-components'
 
-
 const BeforeContainer = styled.div`
     width: 100vw;
     height: 100vh;

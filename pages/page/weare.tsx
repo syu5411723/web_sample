@@ -17,6 +17,7 @@ const weare = () => {
                 <ChangeLink />
                 <MainRight />
                 <WeAreMain />
+                
             </Layout>
         </>
     )

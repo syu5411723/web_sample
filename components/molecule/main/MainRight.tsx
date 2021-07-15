@@ -7,6 +7,7 @@ import Line from '../../atom/main/right/Line'
 import SideBg from '../../atom/main/right/SideBg'
 import SideText from '../../atom/main/right/SideText'
 import { motion } from 'framer-motion'
+import { TimeContext } from '../../Layout'
 
 const Container = styled(motion.div)`
     position:fixed;
@@ -24,9 +25,9 @@ const Links = styled(Link)`
 const TextWrapper = styled.a``
 
 const containerV = {
-    hidden: {opacity: 0, x: "50px", rotate: 90 },
-    visible: {opacity: 1, x: 0, ratate: 90, transition: { duration: 2, delay:2, ease: "easeOut" } },
-    exit: {opacity: 0, x: "50px", rotate: 90, transition: { duration: 0.6, } }
+    hidden: { opacity: 0, x: "50px", rotate: 90 },
+    visible: { opacity: 1, x: 0, rotate: 90, transition: { duration: 2, ease: "easeOut" } },
+    exit: { opacity: 0, x: "50px", rotate: 90, transition: { duration: 0.6, } }
 }
 
 const MainRight = () => {
@@ -34,17 +35,17 @@ const MainRight = () => {
     const RightChange = () => {
         setOpen(!isOpen);
     }
+    const { time } = React.useContext(TimeContext);
     return (
         <>
             <SideBg
                 isOpen={isOpen}
             />
             <AnimateLine isOpen={isOpen} />
-            <Links href="/page/wedo" scroll={false} >
+            <Links href="/page/wedo" scroll={false}>
                 <Container
                     variants={containerV}
-                    initial="hidden"
-                    animate="visible"
+                    animate={time ? "visible" : "hidden"}
                     exit="exit"
                     onMouseLeave={RightChange}
                     onMouseEnter={RightChange}

@@ -7,6 +7,7 @@ import Line from '../../atom/main/left/Line'
 import SideBg from '../../atom/main/left/SideBg'
 import SideText from '../../atom/main/left/SideText'
 import { motion } from 'framer-motion'
+import { TimeContext } from '../../Layout'
 
 const Container = styled(motion.div)`
     position:fixed;
@@ -24,7 +25,7 @@ const TextWrapper = styled.a`
 
 const containerv = {
     hidden: {opacity:0, x:"-50px", rotate: 90},
-    visible: {opacity: 1, x: 0 ,ratate: 90, transition: {duration: 2 , delay:2 ,ease: "easeOut" }},
+    visible: {opacity: 1, x: 0 ,rotate: 90, transition: {duration: 2 ,ease: "easeOut" }},
     exit: {opacity: 0, x:"-50px", rotate: 90,transition:{duration: 0.6,}}
 }
 
@@ -33,6 +34,7 @@ const MainLeft: VFC = () => {
     const handleChange = () => {
         setLeftOpen(!leftOpen);
     }
+    const { time } = React.useContext(TimeContext);
     return (
         <>
             <SideBg
@@ -43,7 +45,7 @@ const MainLeft: VFC = () => {
                 <Container
                     variants={containerv}
                     initial="hidden"
-                    animate="visible"
+                    animate={time ? "visible" : "hidden"}
                     exit="exit"
                     onMouseLeave={handleChange}
                     onMouseEnter={handleChange}

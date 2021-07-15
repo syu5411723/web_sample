@@ -1,11 +1,9 @@
 ﻿import { motion } from "framer-motion"
-import { constants } from "node:buffer"
 import { useContext, useReducer, useEffect } from "react"
-import styled, { keyframes } from "styled-components"
+import styled from "styled-components"
 
 import Carousel from "../../molecule/main/home/Carousel"
-import { TimeContext } from "../../../pages"
-import { useDistortionEffectCarousel } from "distortion-effect-carousel"
+import { TimeContext } from "../../Layout"
 
 type State = { bg: string }
 const initialState = { bg: "white" }
@@ -27,8 +25,11 @@ const reducer = (state: State, actoin: Action) => {
             return state
     }
 }
-
-const Container = styled(motion.div) <State>`
+const Wrapper = styled(motion.div)`
+    width: 100%;
+    height: 100%;
+`
+const CarouslInner = styled(motion.div) < State>`
     width:100vw;
     height: 100vh;
     background-color: #fff;
@@ -39,6 +40,11 @@ const Container = styled(motion.div) <State>`
     };
     transition: 0.2s;
 `
+
+const wrapperV = {
+    hidden: { clipPath: "circle(0)" },
+    visible: { clipPath: "circle(100%)", transition: { duration: 3, delay: 5 } }
+}
 
 export const HomeMain = () => {
     const [state, dispatch] = useReducer(reducer, initialState);
@@ -51,10 +57,10 @@ export const HomeMain = () => {
                     dispatch({ type: "pink" });
                 }
                 if (bg === "pink") {
-                    dispatch({type : "black"});
+                    dispatch({ type: "black" });
                 }
-                if (bg  === "black") {
-                    dispatch({type: "white"});
+                if (bg === "black") {
+                    dispatch({ type: "white" });
                 }
             }, 4000)
             return () => clearTimeout(timer);
@@ -62,9 +68,15 @@ export const HomeMain = () => {
     })
     return (
         <>
-            <Container className={time && "animate"} bg={bg}>
-                <Carousel />
-            </Container>
+            <Wrapper
+                variants={wrapperV}
+                initial="hidden"
+                animate="visible"
+            >
+                <CarouslInner bg={bg}>
+                    <Carousel />
+                </CarouslInner>
+            </Wrapper>
         </>
     )
 }

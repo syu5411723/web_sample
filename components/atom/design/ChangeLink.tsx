@@ -13,7 +13,7 @@ const ChnagePage = styled(motion.div)`
 
 const pageV = {
     hidden: { x: "100vw" },
-    exit: { x: "0vw", transition: { duration: 1.3, delay: 0.5 }}
+    exit: { x: "0vw", transition: { duration: 1, delay: 0.5 }}
 }
 
 const ChangeLink = () => {

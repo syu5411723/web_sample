@@ -24,8 +24,8 @@ type Transition = {
 
 const Headtext:VFC<Props> = ({ text, delay  }) => {
     const textV = {
-        hidden: { opacity: 0, y: "50px" },
-        visible: { opacity: 1, y: "0px", transition: { type: "spring", stiffness: 150, delay:`${delay}` } }
+        hidden: { opacity: 0, y: "50px", x: "-20px" },
+        visible: { opacity: 1, y: "0px", x: "0px", transition: { duration: 0.6, ease: "easeOut", delay:`${delay}` } }
     }
 
     return (

@@ -1,5 +1,6 @@
 ﻿import { motion, useTransform, useViewportScroll } from "framer-motion"
 import styled from "styled-components"
+import React, {useEffect} from "react"
 
 import Bg from "../../../atom/main/weare/sec01/Bg"
 import Img from "../../../atom/main/weare/sec01/Img"
@@ -29,6 +30,9 @@ const thumbV = {
 const Sec01 = () => {
     const { scrollYProgress } = useViewportScroll();
     const y = useTransform(scrollYProgress, [0, 0.1], [0, 180])
+    useEffect(() => {
+        window.scrollTo(0,0);
+    }, [])
     return (
         <>
             <Container>
