@@ -8,12 +8,12 @@ const ChnagePage = styled(motion.div)`
     width: 100vw;
     height: 100vh;
     background-color: #333;
-    z-index: 30;
+    z-index: 32;
 `
 
 const pageV = {
     hidden: { x: "100vw" },
-    exit: { x: "0vw", transition: { duration: 1.3, delay: 0.5 } }
+    exit: { x: "0vw", transition: { duration: 1.3, delay: 0.5 }}
 }
 
 const ChangeLink = () => {

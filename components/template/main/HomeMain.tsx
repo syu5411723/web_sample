@@ -1,55 +1,69 @@
 ﻿import { motion } from "framer-motion"
-import { useState, createContext, Dispatch } from "react"
+import { constants } from "node:buffer"
+import { useContext, useReducer, useEffect } from "react"
 import styled, { keyframes } from "styled-components"
 
-import HomeImage from "../../organism/main/home/HomeImage"
+import Carousel from "../../molecule/main/home/Carousel"
+import { TimeContext } from "../../../pages"
+import { useDistortionEffectCarousel } from "distortion-effect-carousel"
 
-const BgAnimation = keyframes`
-    0% {
-        background-color: #fff;
+type State = { bg: string }
+const initialState = { bg: "white" }
+
+type Action =
+    | { type: "white" }
+    | { type: "pink" }
+    | { type: "black" }
+
+const reducer = (state: State, actoin: Action) => {
+    switch (actoin.type) {
+        case "white":
+            return { bg: "white" }
+        case "pink":
+            return { bg: "pink" }
+        case "black":
+            return { bg: "black" }
+        default:
+            return state
     }
-    5% {
-        background-color: #D0B2A2;
-    }
-    33.3% {
-        background-color: #D0B2A2;
-    }
-    38.3% {
-        background-color: #333;
-    }
-    66.6% {
-        background-color: #333;
-    }
-    71.6% {
-        background-color: #fff;
-    }
-    100% {
-        background-color: #fff;
-    }
-`
-const Container = styled(motion.div)`
+}
+
+const Container = styled(motion.div) <State>`
     width:100vw;
     height: 100vh;
     background-color: #fff;
-    animation: ${BgAnimation} infinite 12s ;
-    animation-delay:9.1s;
+    background-color: ${({ bg }) =>
+        bg === "white" && "#fff" ||
+        bg === "pink" && "#D0B2A2" ||
+        bg === "black" && "#333"
+    };
+    transition: 0.2s;
 `
-export interface contextProps {
-    time: boolean
-}
-export const TimeContext = createContext({} as contextProps)
 
 export const HomeMain = () => {
-    const [time, setTime] = useState(false);
-    const swiperTime = setTimeout(() => {
-        setTime(true)
-    }, 5000);
+    const [state, dispatch] = useReducer(reducer, initialState);
+    const { time } = useContext(TimeContext)
+    const bg = state.bg
+    useEffect(() => {
+        if (time === true) {
+            const timer = setTimeout(() => {
+                if (time === true) {
+                    dispatch({ type: "pink" });
+                }
+                if (bg === "pink") {
+                    dispatch({type : "black"});
+                }
+                if (bg  === "black") {
+                    dispatch({type: "white"});
+                }
+            }, 4000)
+            return () => clearTimeout(timer);
+        }
+    })
     return (
         <>
-            <Container className={time && "animate" }>
-                <TimeContext.Provider value={{ time }}>
-                    <HomeImage />
-                </TimeContext.Provider>
+            <Container className={time && "animate"} bg={bg}>
+                <Carousel />
             </Container>
         </>
     )

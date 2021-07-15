@@ -12,10 +12,9 @@ const Text = styled(motion.h3)`
 `
 type Props = {
     leftOpen: boolean
-    color: string
 }
 
-const SideText:VFC<Props> = ({leftOpen, color}) => {
+const SideText:VFC<Props> = ({leftOpen}) => {
     const textV = {
         closed: {color: "#fff"},
         open: {color: "#999"},

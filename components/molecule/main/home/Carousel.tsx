@@ -16,7 +16,7 @@ const images = [
     './images/index_3.jpg',
 ]
 
-const Swiper = () => {
+const Carousel = () => {
     return (
         <>
             <CarouselWrapper>
@@ -26,4 +26,4 @@ const Swiper = () => {
     )
 }
 
-export default Swiper
+export default Carousel

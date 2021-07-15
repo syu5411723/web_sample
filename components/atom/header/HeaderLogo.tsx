@@ -19,7 +19,7 @@ const HeaderLogo: VFC = () => {
     const [hover, setHover] = React.useState(false);
     return (
         <>
-            <Links href="/">
+            <Links href="/" scroll={false}>
                 <Logo
                     onMouseEnter={() => setHover(true) }
                     onMouseLeave={()=> setHover(false)}

@@ -8,7 +8,7 @@ const Wrapper = styled(motion.div)`
     height: 186px;
     top:0;
     left:0;
-    z-index:100;
+    z-index:31;
     color:#fff;
 `
 const Svg = styled.svg`

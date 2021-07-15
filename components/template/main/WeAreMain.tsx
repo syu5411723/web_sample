@@ -19,7 +19,7 @@ const WeAreMain = () => {
                 <Sec03 />
                 <Sec04 />
                 <Sec05 />
-                <Sec06 />
+                {/* <Sec06 /> */}
                 <Sec07 />
                 <Footer primary={true} /> 
             </Container>

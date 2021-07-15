@@ -14,10 +14,10 @@ const lineV = {
     open: {
         width: ["0%", "100%", "100%", "100%"],
         x: ["0%", "0%", "0%", "100%"],
-        trnsition: {
-            duration: 0.7,
-            times: [0, 0.33, 0.66, 1],
-            ease: [],
+        transition: {
+            duration: 0.5,
+            times: [0, 0.35, 0.55, 1],
+            ease: "easeInOut",
         }
     },
 }

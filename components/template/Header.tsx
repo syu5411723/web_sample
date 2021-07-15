@@ -2,7 +2,7 @@
 import styled from 'styled-components'
 import HeaderInner from '../molecule/header/HeaderInner'
 
-const HeaderContainer  = styled.div<Props>`
+const HeaderContainer  = styled.div`
     position:fixed;
     width:100%;
     height: 80px;
@@ -11,16 +11,12 @@ const HeaderContainer  = styled.div<Props>`
     left: 0;
     color: #fff;
     mix-blend-mode:difference;
-
 `
-type Props = {
-    white:boolean
-}
 
-const Header:VFC<Props> = ({ white}) => {
+const Header:VFC = () => {
     return (
         <>
-            <HeaderContainer white={white}  >
+            <HeaderContainer  >
                 <HeaderInner />
             </HeaderContainer>
         </>

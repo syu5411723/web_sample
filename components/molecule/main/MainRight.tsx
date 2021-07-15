@@ -40,7 +40,7 @@ const MainRight = () => {
                 isOpen={isOpen}
             />
             <AnimateLine isOpen={isOpen} />
-            <Links href="/page/wedo" >
+            <Links href="/page/wedo" scroll={false} >
                 <Container
                     variants={containerV}
                     initial="hidden"

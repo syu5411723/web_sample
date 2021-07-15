@@ -19,7 +19,7 @@ const Wrapper = styled(motion.div)`
     height: 186px;
     position:relative;
     overflow:hidden;
-    z-index:90;
+    z-index:30;
 `
 const Animation = keyframes`
     from {

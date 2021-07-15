@@ -21,9 +21,6 @@ const Links = styled(Link)``
 const TextWrapper = styled.a`
     cursor: pointer;
 `
-type Props = {
-    color: string
-}
 
 const containerv = {
     hidden: {opacity:0, x:"-50px", rotate: 90},
@@ -31,7 +28,7 @@ const containerv = {
     exit: {opacity: 0, x:"-50px", rotate: 90,transition:{duration: 0.6,}}
 }
 
-const MainLeft: VFC<Props> = ({ color }) => {
+const MainLeft: VFC = () => {
     const [leftOpen, setLeftOpen] = useState(false);
     const handleChange = () => {
         setLeftOpen(!leftOpen);
@@ -42,7 +39,7 @@ const MainLeft: VFC<Props> = ({ color }) => {
                 leftOpen={leftOpen}
             />
             <AnimateLine leftOpen={leftOpen} />
-            <Links href="/page/weare">
+            <Links href="/page/weare" scroll={false}>
                 <Container
                     variants={containerv}
                     initial="hidden"
@@ -52,7 +49,7 @@ const MainLeft: VFC<Props> = ({ color }) => {
                     onMouseEnter={handleChange}
                 >
                     <TextWrapper>
-                        <SideText leftOpen={leftOpen} color={color} />
+                        <SideText leftOpen={leftOpen} />
                     </TextWrapper>
                     <Line leftOpen={leftOpen} />
                 </Container>

@@ -15,12 +15,12 @@ const BgWrapper = styled(motion.div)`
 `
 const bgV = {
     closed: {x: "100%"},
-    open: {x: "0", transition:{duration:1, ease: [0,.85,.81,1]}}, 
+    open: {x: "0", transition:{duration:3, ease: [0,.74,.34,.8]}}, 
 }
 
 const Bg = () => {
     const [ref, inView] = useInView({
-        rootMargin: "-100px 0px",
+        rootMargin: "-200px 0px",
         triggerOnce: true,
     })
     return (
