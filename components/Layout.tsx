@@ -22,7 +22,7 @@ const Layout = ({ children }) => {
                 <title>Super Crowds</title>
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
             </Head>
-            <Header />
+            {/* <Header /> */}
             <TimeContext.Provider value={{time}}>
             <div>
                 {children}

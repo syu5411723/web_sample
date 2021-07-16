@@ -8,7 +8,7 @@ const LineWrapper = styled.div`
     justify-content:space-between;
     align-items:center;
     position: fixed;
-    top: 53%;
+    top: 52%;
     left: 80px;
     z-index: 30;
 `

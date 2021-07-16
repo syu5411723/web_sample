@@ -4,6 +4,10 @@ import styled from "styled-components"
 
 import Carousel from "../../molecule/main/home/Carousel"
 import { TimeContext } from "../../Layout"
+import Right from "../../organism/main/home/Right"
+import Left from "../../organism/main/home/Left"
+import LetterMotion from "../../atom/main/home/LetterMotion"
+import Header from "../Header"
 
 type State = { bg: string }
 const initialState = { bg: "white" }
@@ -25,25 +29,21 @@ const reducer = (state: State, actoin: Action) => {
             return state
     }
 }
-const Wrapper = styled(motion.div)`
-    width: 100%;
-    height: 100%;
-`
-const CarouslInner = styled(motion.div) < State>`
-    width:100vw;
-    height: 100vh;
-    background-color: #fff;
+const CarouselWrapper = styled(motion.div) < State>`
+    width:100%;
+    height:100%;
+    transition:.2s;
     background-color: ${({ bg }) =>
         bg === "white" && "#fff" ||
         bg === "pink" && "#D0B2A2" ||
         bg === "black" && "#333"
     };
-    transition: 0.2s;
+
 `
 
 const wrapperV = {
     hidden: { clipPath: "circle(0)" },
-    visible: { clipPath: "circle(100%)", transition: { duration: 3, delay: 5 } }
+    visible: { clipPath: "circle(100%)", transition: { duration: 2.5, delay: 5 } }
 }
 
 export const HomeMain = () => {
@@ -68,15 +68,17 @@ export const HomeMain = () => {
     })
     return (
         <>
-            <Wrapper
+            <LetterMotion />
+            <CarouselWrapper bg={bg}
                 variants={wrapperV}
                 initial="hidden"
                 animate="visible"
             >
-                <CarouslInner bg={bg}>
-                    <Carousel />
-                </CarouslInner>
-            </Wrapper>
+                <Header />
+                <Right home={true} />
+                <Left home={true} />
+                <Carousel />
+            </CarouselWrapper>
         </>
     )
 }

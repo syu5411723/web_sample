@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import { Sec01, Sec02, Sec03, Sec04, Sec05, Sec06, Sec07 } from "../../organism/main/wedo/index"
 import Footer from '../../molecule/footer/Footer'
-import Top from '../../Top'
+import Header from '../Header'
 
 const Container = styled.div`
     position: relative;
@@ -22,6 +22,7 @@ const WeDoMain = () => {
     return (
         <>
             <Container>
+                <Header />
                 <Inner>
                     <Sec01 />
                     <Sec02 />

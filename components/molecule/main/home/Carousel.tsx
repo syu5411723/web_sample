@@ -2,12 +2,13 @@
 import CarouselImage from "../../../atom/main/home/Carouselmage"
 
 const CarouselWrapper = styled.div`
-    width:100%;
-    height:100%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    position:relative;
+    width: 80vw;
+    height: 85vh;
+    position:absolute;
+    z-index:20;
+    top:55%;
+    left:50%;
+    transform:translate(-50%, -50%);
 `
 
 const images = [

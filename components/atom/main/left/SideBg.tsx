@@ -9,7 +9,7 @@ const BgWrapper = styled(motion.div)`
     position:fixed;
     top: 0;
     right:100%;
-    z-index:11;
+    z-index:10;
 ` 
 const wrapperV = {
     closed: {x: "0%"},

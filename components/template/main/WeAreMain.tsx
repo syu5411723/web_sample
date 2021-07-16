@@ -5,6 +5,7 @@ import React, { useEffect } from "react"
 
 import { Sec01, Sec02, Sec03, Sec04, Sec05, Sec06, Sec07 } from "../../organism/main/weare/index"
 import Footer from "../../molecule/footer/Footer"
+import Header from "../Header"
 
 const Container = styled(motion.div)`
     margin-top: 200px;
@@ -29,6 +30,7 @@ const WeAreMain = () => {
                 initial="hidden"
                 animate="visible"
             >
+                <Header />
                 <Sec01 />
                 <Sec02 />
                 <Sec03 />

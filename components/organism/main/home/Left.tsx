@@ -8,7 +8,8 @@ import { TimeContext } from '../../../Layout'
 import MainLeft from '../../../molecule/main/MainLeft'
 
 const Links = styled(Link)``
-const Inner = styled.a``
+const Inner = styled.a`
+`
 type ContextProps = {
     open: boolean
     handleChange: () => void
