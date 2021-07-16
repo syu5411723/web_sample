@@ -10,7 +10,7 @@ const LineWrapper = styled.div`
     position: fixed;
     top: 50%;
     right: 80px;
-    z-index: 30;
+    z-index: 40;
 `
 const Line = styled(motion.div)`
     width:1px;

@@ -30,7 +30,6 @@ const WeAreMain = () => {
                 initial="hidden"
                 animate="visible"
             >
-                <Header />
                 <Sec01 />
                 <Sec02 />
                 <Sec03 />

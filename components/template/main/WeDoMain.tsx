@@ -22,7 +22,6 @@ const WeDoMain = () => {
     return (
         <>
             <Container>
-                <Header />
                 <Inner>
                     <Sec01 />
                     <Sec02 />
