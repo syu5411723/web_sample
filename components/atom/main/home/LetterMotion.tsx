@@ -1,5 +1,5 @@
 ﻿import { motion } from "framer-motion"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import styled, { keyframes, css } from "styled-components"
 
 import LetterPath from "./LetterPath"
@@ -22,51 +22,45 @@ const Wrapper = styled(motion.div)`
     z-index:30;
 `
 const Animation = keyframes`
-    from {
-        transform: translateY(0);    
+    0% {
+        transform: translateY(0%);    
     }
-    to {
+    100% {
         transform: translateY(-97.82609%);
     }
 `
+
 type SetTime = {
     setTime: boolean
 }
-const Img = styled(motion.div) <SetTime>`
+
+const Img = styled(motion.div)`
     position:absolute;
     width:100%;
     height:4600%;
     top:0;
     left:0;
-    ${({ setTime }) => setTime && css`
-        animation: ${Animation} 2s steps(45) both;
-    `}
-    &::before {
-        content: url("/images/motion.svg");
-        display:block;
-        width:100%;
-        height:100%;
-    }
+    z-index:40;
+    animation: ${Animation} 1.2s steps(45) both;
+    animation-delay:3.5s;
+    background:url("/images/message_loading (3).svg");
 `
+
 const wrapperV = {
     hidden: { opacity: 1 },
-    visible: { opacity: 0, transition: { duration: 2.5, delay: 4.3 } }
+    visible: { opacity: 0, transition: { duration: 1.5, delay: 4.3 } }
 }
 
 const LetterMotion = () => {
-    const [timed, setTimed] = useState(false);
-    const handleTimed = setTimeout(() => {
-        setTimed(true);
-    }, 2000)
     return (
         <>
             <Inner>
                 <Wrapper>
-                    <Img setTime={timed}
-                        variants={wrapperV}
-                        initial="hieen"
-                        animate="visible"
-                    />
+                        < Img
+                            variants={wrapperV}
+                            initial="hieen"
+                            animate="visible"
+                        />
                     <LetterPath />
                 </Wrapper>
             </Inner>

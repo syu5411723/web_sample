@@ -7,7 +7,7 @@ import Right from "../../organism/main/home/Right"
 import Left from "../../organism/main/home/Left"
 import LetterMotion from "../../atom/main/home/LetterMotion"
 import Header from "../Header"
-import Carousel from  "../../organism/main/home/Carousel"
+import Carousel from "../../organism/main/home/Carousel"
 
 type ContainerProps = {
     time: boolean
@@ -37,7 +37,7 @@ export const HomeMain = () => {
         <>
             <LetterMotion />
             <Container time={time} >
-                    <Carousel />
+                <Carousel />
                 <Header />
                 <Right home={true} />
                 <Left home={true} />
