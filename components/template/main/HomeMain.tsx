@@ -1,6 +1,6 @@
 ﻿import { motion } from "framer-motion"
 import { useContext, useReducer, useEffect } from "react"
-import styled from "styled-components"
+import styled, { css, keyframes } from "styled-components"
 
 import Carousel from "../../molecule/main/home/Carousel"
 import { TimeContext } from "../../Layout"
@@ -29,21 +29,43 @@ const reducer = (state: State, actoin: Action) => {
             return state
     }
 }
-const CarouselWrapper = styled(motion.div) < State>`
+type ContainerProps = {
+    time: boolean
+}
+const ClipAnimation = keyframes`
+    from {
+        clip-path: circle(0);
+    }
+    to {
+        clip-path: circle(100%);
+    }
+`
+const Container = styled(motion.div) <ContainerProps>`
     width:100%;
     height:100%;
-    transition:.2s;
-    background-color: ${({ bg }) =>
-        bg === "white" && "#fff" ||
-        bg === "pink" && "#D0B2A2" ||
-        bg === "black" && "#333"
+    ${({ time }) => !time && css`
+        clip-path: circle(0);
+    `}
+    ${({ time }) => time && css`
+        animation: ${ClipAnimation} 2.5s ease;
+    `}
+`
+const CarouselWrapper = styled(motion.div) <State>`
+    width: 100%;
+    height: 100%;
+    transition: .2s;
+    background-color: #fff;
+    background-color: ${
+        ({ bg }) =>
+            bg === "white" && "#fff" ||
+            bg === "pink" && "#D0B2A2" ||
+            bg === "black" && "#333"
     };
-
 `
 
-const wrapperV = {
+const containerV = {
     hidden: { clipPath: "circle(0)" },
-    visible: { clipPath: "circle(100%)", transition: { duration: 2.5, delay: 5 } }
+    visible: { clipPath: "circle(100%)", transition: { duration: 2.5, }}
 }
 
 export const HomeMain = () => {
@@ -53,7 +75,7 @@ export const HomeMain = () => {
     useEffect(() => {
         if (time === true) {
             const timer = setTimeout(() => {
-                if (time === true) {
+                if (bg === "white") {
                     dispatch({ type: "pink" });
                 }
                 if (bg === "pink") {
@@ -69,16 +91,14 @@ export const HomeMain = () => {
     return (
         <>
             <LetterMotion />
-            <CarouselWrapper bg={bg}
-                variants={wrapperV}
-                initial="hidden"
-                animate="visible"
-            >
+            <Container time={time} >
+                <CarouselWrapper bg={bg}>
+                    <Carousel />
+                </CarouselWrapper>
                 <Header />
                 <Right home={true} />
                 <Left home={true} />
-                <Carousel />
-            </CarouselWrapper>
+            </Container>
         </>
     )
 }

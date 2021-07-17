@@ -1,7 +1,6 @@
 ﻿import React, { VFC } from 'react'
 import Link from "next/link"
 import styled from 'styled-components'
-import MenuIcon from './MenuIcon'
 import HeaderLine from './HeaderLine'
 
 const MenuWrapper = styled.div`
@@ -24,7 +23,6 @@ const HeaderMenu: VFC = () => {
     const [menuHover, setMenuHover] = React.useState(false);
     return (
         <MenuWrapper>
-            <MenuIcon />
             <Links href="/" >
                 <MenuInner
                     onMouseEnter={() => setMenuHover(true)}

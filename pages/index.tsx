@@ -14,7 +14,6 @@ const Container = styled(motion.div)`
     z-index:2;
     background-color:#fff;
 `
-
 const containerV = {
   hidden: { x: "100vw" },
   visible: { x: "0px", transition: { duration: 1, delay: 0.5 } }
