@@ -17,7 +17,7 @@ const images = [
     './images/index_3.jpg',
 ]
 
-const Carousel = () => {
+const CarouselInner = () => {
     return (
         <>
             <CarouselWrapper>
@@ -27,4 +27,4 @@ const Carousel = () => {
     )
 }
 
-export default Carousel
+export default CarouselInner
