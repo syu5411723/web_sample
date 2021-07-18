@@ -1,5 +1,6 @@
 ﻿import { motion } from "framer-motion"
 import { useContext } from "react"
+import React, { useEffect } from "react"
 import styled, { css, keyframes } from "styled-components"
 
 import { TimeContext } from "../../Layout"
@@ -13,10 +14,13 @@ type ContainerProps = {
     time: boolean
 }
 const ClipAnimation = keyframes`
-    from {
+    0% {
         clip-path: circle(0);
     }
-    to {
+    20% {
+        clip-path: circle(0);
+    }
+    100% {
         clip-path: circle(100%);
     }
 `
@@ -27,12 +31,12 @@ const Container = styled(motion.div) <ContainerProps>`
         clip-path: circle(0);
     `}
     ${({ time }) => time && css`
-        animation: ${ClipAnimation} 2.5s ease;
+        animation: ${ClipAnimation} 3.5s ease;
     `}
 `
 
 export const HomeMain = () => {
-    const { time } = useContext(TimeContext)
+    const { time } = useContext(TimeContext);
     return (
         <>
             <LetterMotion />
