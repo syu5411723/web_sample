@@ -31,9 +31,7 @@ const Sec03 = () => {
                 >
                     <Bg />
                 </Wrapper>
-                <ImgAnimate img="/images/brand_1.png" size={18} top={30} left={30} zIndex={1} delay={1.22} inView={inView} animateDelay={0} />
-                <ImgAnimate img="/images/brand_2.png" size={20} top={40} left={40} zIndex={2} delay={1.24} inView={inView} animateDelay={1}  />
-                <ImgAnimate img="/images/brand_3.png" size={30} top={30} left={52} zIndex={1} delay={1.26} inView={inView} animateDelay={2} />
+                <ImgAnimate  inView={inView} />
                 <Number inView={inView} />
             </Container>
         </>

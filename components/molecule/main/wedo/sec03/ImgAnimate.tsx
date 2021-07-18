@@ -7,11 +7,12 @@ import { Img } from "../../../../atom/main/wedo/sec03/index"
 
 const ImgWrapper = styled.div``
 
-const ImgAnimate = ({ delay, inView, img, size, top, left, zIndex, animateDelay }) => {
+
+const ImgAnimate = ({ inView }) => {
     return (
         <>
             <ImgWrapper>
-                <Img img={img} size={size} top={top} left={left} zIndex={zIndex} delay={delay} inView={inView} animateDelay={animateDelay} />
+                <Img inView={inView}  />
             </ImgWrapper>
         </>
     )

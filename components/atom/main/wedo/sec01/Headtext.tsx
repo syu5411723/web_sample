@@ -12,21 +12,20 @@ const Text = styled(motion.h2)`
 
 type Props = {
     text: string
-    delay: number
 }
 
-const Headtext:VFC<Props> = ({ text, delay  }) => {
+const Headtext:VFC<Props> = ({ text }) => {
     const textV = {
         hidden: { opacity: 0, y: "50px", x: "-10px" },
-        visible: { opacity: 1, y: "0px", x: "0px", transition: { duration: 1, ease: "easeOut", delay:`${delay}` } }
+        visible: { opacity: 1, y: "0px", x: "0px", transition: { duration: 1, ease: "easeOut"}}
     }
 
     return (
         <>
             <Text
                 variants={textV}
-                initial="hidden"
-                animate="visible"
+                // initial="hidden"
+                // animate="visible"
             >{text}</Text>
         </>
     )

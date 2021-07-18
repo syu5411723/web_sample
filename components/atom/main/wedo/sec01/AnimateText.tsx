@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 import Headtext from './Headtext'
 
-const Wrapper = styled.div`
+const Wrapper = styled(motion.div)`
     text-align:center;
     display:flex;
     justify-content:center;
@@ -13,21 +13,28 @@ const Wrapper = styled.div`
     width:100%;
     margin-bottom: 40px;
 `
-
+const wrapperV = {
+    hidden: {opacity: 0},
+    visible: {opacity: 1 ,transition: {staggerChildren: 0.03, delayChildren: 2}},
+}
 
 const AnimateText = ({text01, text02, text03, text04, text05, text06, text07, text08, text09}) => {
     return (
         <>
-            <Wrapper>
-                <Headtext text={text01} delay={2} />
-                <Headtext text={text02} delay={2.02} />
-                <Headtext text={text03}delay={2.04} />
-                <Headtext text={text04} delay={2.06} />
-                <Headtext text={text05} delay={2.08} />
-                <Headtext text={text06} delay={2.10} />
-                <Headtext text={text07} delay={2.12} />
-                <Headtext text={text08} delay={2.14} />
-                <Headtext text={text09} delay={2.16} />
+            <Wrapper
+                variants={wrapperV}
+                initial="hidden"
+                animate="visible"
+            >
+                <Headtext text={text01}  />
+                <Headtext text={text02} />
+                <Headtext text={text03} />
+                <Headtext text={text04} />
+                <Headtext text={text05} />
+                <Headtext text={text06} />
+                <Headtext text={text07} />
+                <Headtext text={text08} />
+                <Headtext text={text09} />
             </Wrapper>
         </>
     )
