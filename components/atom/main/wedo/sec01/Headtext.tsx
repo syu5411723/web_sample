@@ -14,18 +14,11 @@ type Props = {
     text: string
     delay: number
 }
-type Transition = {
-    type : string
-    stuffness: number
-    delay: any
-}
-
-
 
 const Headtext:VFC<Props> = ({ text, delay  }) => {
     const textV = {
-        hidden: { opacity: 0, y: "50px", x: "-20px" },
-        visible: { opacity: 1, y: "0px", x: "0px", transition: { duration: 0.6, ease: "easeOut", delay:`${delay}` } }
+        hidden: { opacity: 0, y: "50px", x: "-10px" },
+        visible: { opacity: 1, y: "0px", x: "0px", transition: { duration: 1, ease: "easeOut", delay:`${delay}` } }
     }
 
     return (

@@ -19,6 +19,8 @@ const Layout = ({ children }) => {
             <Head>
                 <title>Super Crowds</title>
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+                <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet"></link>
+                <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet"></link>
             </Head>
             <TimeContext.Provider value={{time}}>
             <div>

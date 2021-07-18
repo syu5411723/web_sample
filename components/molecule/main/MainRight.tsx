@@ -14,7 +14,6 @@ const Container = styled(motion.div)`
     position:fixed;
     top:50%;
     right: -50px;
-    transform: rotate(90deg);
     z-index: 20;
     cursor: pointer;
     color: #fff;
@@ -22,7 +21,7 @@ const Container = styled(motion.div)`
 `
 const containerV = {
     hidden: { opacity: 0, x: "50px", rotate: 90 },
-    visible: { opacity: 1, x: 0, rotate: 90, transition: { duration: 2, delay: 1.8, ease: "easeOut" } },
+    visible: { opacity: 1, x: 0, rotate: 90, transition: { duration: 2, delay: 1.8, ease: [.89,0,.31,.31] } },
     exit: { opacity: 0, x: "50px", rotate: 90, transition: { duration: 0.6, } }
 }
 type Porps = {
@@ -35,6 +34,7 @@ const MainRight: VFC<Porps> = ({ time }) => {
         <>
             <Container
                 variants={containerV}
+                initial="hidden"
                 animate={time ? "visible" : "hidden"}
                 exit="exit"
                 onMouseLeave={handleChange}

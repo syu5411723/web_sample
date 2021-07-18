@@ -2,7 +2,7 @@
 import ImgSec from "../../../atom/main/design/ImgSec"
 
 const Container = styled.div`
-    margin-bottom:100px;
+    /* margin-bottom:100px; */
 `
 
 const Sec05 = () => {

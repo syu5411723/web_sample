@@ -14,7 +14,7 @@ const BeforeContainer = styled.div`
 
 const contaienrV = {
     hidden: { x: "100vw" },
-    visible: { x: "0vw", transition: { duration: 1, delay: 0.5 } }
+    visible: { x: "0vw", transition: { duration: 1, delay: 0.5, ease: [.89,0,.31,.31] } }
 }
 const AfterContainer = styled(motion.div) <Props>`
     position:fixed;
